@@ -1,0 +1,161 @@
+item_num;type;sentence
+1;setup;A burglar broke into a bank carrying some dynamite. He planned to blow open a safe. 
+1;1-context;Once inside he saw that there was a safe which had a new lock and a strongbox which had an old lock. 
+1;2-context;Once inside he saw that there was a safe which had a new lock and a safe which had an old lock. 
+1;NP;The burglar blew open the safe with the new lockand made off with the loot.
+1;VP;The burglar blew open the safe with the dynamite and made off with the loot.
+2;setup;A mechanic walked up to a car carrying a monkey wrench. He thought he’d have to change a tyre. 
+2;1-context;On examining the car he found that there was a tyre which had a faulty valve and a fuel line which had a small hole in it. 
+2;2-context;On examining the car he found that there was a tyre which had a faulty valve and a tyre which had a small hole in it. 
+2;NP;The mechanic changed the tyre with the faulty valve but it took a long time.
+2;VP;The mechanic changed the tyre with the monkey wrench but it took a long time.
+3;setup;A convict escaped from his cell clutching a knife. He was prepared to attack a warder if necessary. 
+3;1-context;Once outside he saw a warder holding a bunch of keys and a policeman holding a long truncheon. 
+3;2-context;Once outside he saw a warder holding a bunch of keys and a warden holding a long truncheon.
+3;NP;The convict suddenly lunged at the warder with the keys before running off.
+3;VP;The convict suddenly lunged at the warder with the knife before running off.
+4;setup;A schoolteacher walked into class carrying a bamboo cane. He sadistically hoped that he would have to beat a boy.
+4;1-context;On entering he saw that a boy who had a broken leg and a girl who wore glasses didn’t stand up for him.
+4;2-context;On entering he saw that a boy who had a broken leg and a boy who wore glasses didn’t stand up for him.
+4;NP;The schoolteacher beat the boy with the broken leg but the boy didn’t cry out.
+4;VP;The schoolteacher beat the boy with the bamboo cane but the boy didn’t cry out.
+5;setup;John had bought a diamond stylus for his stereo. He planned to play a record. 
+5;1-context;He’d been given a record which had a lot of noisy crackle and a cassette which had a lot of hiss.
+5;2-context;He’d been given a record which had a lot of noisy crackle and a record which had a lot of hiss.
+5;NP;John decided to play the record with the noisy crackle but it sounded terrible.
+5;VP;John decided to play the record with the diamond stylus but it sounded terrible.
+6;setup;A historian was working in the British Museum holding a magnifying glass. He’d sat down to study a map.
+6;1-context;On his desk there was a map which had an appalling tear and a manuscript which seemed in perfect condition.
+6;2-context;On his desk there was a map which had an appalling tear and a map which seemed in perfect condition.
+6;NP;The historian had to study the map with the appalling tear so as to value it.
+6;VP;The historian had to study the map with the magnifying glass so as to value it.
+7;setup;An artist was working at a table holding a long brush. He had a sudden premonition that he was going to knock over a bottle.
+7;1-context;On the table there was a bottle containing some paint and a small jug filled with water.
+7;2-context;On the table there was a bottle containing some paint and a bottle filled with water.
+7;NP;The artist accidently knocked over the bottle with the paint and swore loudly.
+7;VP;The artist accidently knocked over the bottle with the brush and swore loudly.
+8;setup;A window cleaner was climbing his ladder clutching a cloth. He’d been asked to wipe a window. 
+8;1-context;Once up the ladder he saw that there was a window which had a lot of dirt on it and a skylight which was relatively clean. 
+8;2-context;Once up the ladder he saw that there was a window which had a lot of dirt on it and a window which was relatively clean. 
+8;NP;The window cleaner wiped the window with the dirt while singing to himself.
+8;VP;The window cleaner wiped the window with the cloth while singing to himself.
+9;setup;A workman climbed down a manhole carrying a saw. He expected to have to cut through a valve.
+9;1-context;Down the manhole he found a valve which had a lot of rust on it and a section of pipe which had been leaking gas.
+9;2-context;Down the manhole he found a valve which had a lot of rust on it and a valve which had been leaking gas.
+9;NP;The workman cut through the valve with the rust before fitting a new one. 
+9;VP;The workman cut through the valve with the saw before fitting a new one. 
+10;setup;A man was walking up and down a dark street carrying an iron crowbar. He hoped to break into a shop.
+10;1-context;He noticed that there was a shop which had a broken window and a post office which was fitted with a burglar alarm. 
+10;2-context;He noticed that there was a shop which had a broken window and a shop which was fitted with a burglar alarm. 
+10;NP;The man broke into the shop with the broken window but nobody saw him.
+10;VP;The man broke into the shop with the iron crowbar but nobody saw him.
+11;setup;A monkey had been trained to eat using a fork. It was supposed to eat a banana.
+11;1-context;It was given a banana which had a bruise on it and an apple that was perfect.
+11;2-context;It was given a banana which had a bruise on it and a banana that was perfect.
+11;NP;The monkey ate the banana with the bruise much to everyone’s surprise. 
+11;VP;The monkey ate the banana with the fork much to everyone’s surprise. 
+12;setup;A caretaker was walking along a corridor carrying some nails. He’d been told to repair a door.
+12;1-context;He saw a door which had a large crack in it and a locker which wouldn’t shut properly.
+12;2-context;He saw a door which had a large crack in it and a door which wouldn’t shut properly.
+12;NP;The caretaker repaired the door with the crack and then took a tea break. 
+12;VP;The caretaker repaired the door with the nails and then took a tea break. 
+13;setup;A skinhead was walking along a street carrying a large knife. He was planning to attack a policeman.
+13;1-context;He eventually saw a policeman who had a large scar on his face and a policewoman wearing spectacles.
+13;2-context;He eventually saw a policeman who had a large scar on his face and a policeman wearing spectacles.
+13;NP;The skinhead suddenly attacked the policeman with the scar and then ran off.
+13;VP;The skinhead suddenly attacked the policeman with the knife and then ran off.
+14;setup;A dressmaker was working on a dress using a pair of scissors. She had to cut some material for the pockets. 
+14;1-context;She had a piece of material which had a pattern on it and a piece of leather which was plain.
+14;2-context;She had a piece of material which had a pattern on it and a piece of material which was plain.
+14;NP;The dressmaker cut the material with the pattern and then went to have lunch.
+14;VP;The dressmaker cut the material with the scissors and then went to have lunch.
+15;setup;A fireman was running to the scene of a fire carrying a heavy axe. He had to smash down a door.
+15;1-context;When he got to the scene of the fire he found a door which had a very rusty lock and a window which was nailed shut.
+15;2-context;When he got to the scene of the fire he found a door which had a very rusty lock and a door which was nailed shut.
+15;NP;The fireman smashed down the door with the rusty lock but smoke overcame him. 
+15;VP;The fireman smashed down the door with the heavy axe but smoke overcame him. 
+16;setup;A little girl borrowed from the kitchen a bread knife. She wanted to cut an orange into pieces. 
+16;1-context;She found in the fruit bowl an orange which had a very thick rind and a tangerine which had a thin rind.
+16;2-context;She found in the fruit bowl an orange which had a very thick rind and an orange which had a thin rind.
+16;NP;The little girl tried to cut the orange with the thick rind but to no success. 
+16;VP;The little girl tried to cut the orange with the bread knife but to no success. 
+17;setup;A chemist was adjusting a bunsen burner. He was about to heat up a solution. 
+17;1-context;On his bench there was a solution which had biue crystals in it and a powder containing red dye.
+17;2-context;On his bench there was a solution which had biue crystals in it and a solution containing red dye.
+17;NP;The chemist heated the solution with the blue crystals but the gas went out. 
+17;VP;The chemist heated the solution with the bunsen burner but the gas went out. 
+18;setup;A drunk was walking along a street wielding an empty bottle. He felt like smashing a window.
+18;1-context;In front of him he saw a window made of stained glass and a glass door which had bars covering it.
+18;2-context;In front of him he saw a window made of stained glass and a window which had bars covering it.
+18;NP;The drunk smashed the window with the stained glass and staggered off laughing. 
+18;VP;The drunk smashed the window with the empty bottle and staggered off laughing. 
+19;setup;A vet went into an animal cage carrying a dart gun. He had to tranquilise a lion.
+19;1-context;Inside the cage there was a lion that had a big mane and a puma that didn’t have any mane at all.
+19;2-context;Inside the cage there was a lion that had a big mane and a lion that didn’t have any mane at all.
+19;NP;The vet tranquilised the lion with the big mane and then examined it. 
+19;VP;The vet tranquilised the lion with the dart gun and then examined it. 
+20;setup;A tribesman was running through the forest carrying a long spear. He intended to kill a lion.
+20;1-context;On arriving at a clearing he found a lion which had very sharp teeth and a tiger which had strange coloured paws.
+20;2-context;On arriving at a clearing he found a lion which had very sharp teeth and a lion which had strange coloured paws.
+20;NP;The tribesman killed the tion with the sharp teeth and carried it back home.
+20;VP;The tribesman killed the tion with the long spear and carried it back home.
+21;setup;A demolition man was on his way to work in his bulldozer. He’d been told to go to a particular address to demolish a house.
+21;1-context;Once at the address he found a house which had an orate fountain in its garden and a church covered in fine carvings.
+21;2-context;Once at the address he found a house which had an orate fountain in its garden and a house covered in fine carvings.
+21;NP;The man demolished the house with the fountain but it wasn’t the right one.
+21;VP;The man demolished the house with the bulldozer but it wasn’t the right one.
+22;setup;A furniture restorer was getting out some paint stripper. He’d been asked to strip a cabinet.
+22;1-context;In his workshop there was a cabinet which had brass hinges and a chest which had aluminium hinges.
+22;2-context;In his workshop there was a cabinet which had brass hinges and a cabinet which had aluminium hinges.
+22;NP;The restorer stripped the cabinet with the brass hinges and then waxed it.
+22;VP;The restorer stripped the cabinet with the paint stripper and then waxed it.
+23;setup;A doctor walked into a waiting room carrying a stethoscope. He’d arranged to examine a woman patient.
+23;1-context;In the waiting room there was a woman who had a temperature and a man who seemed to have stomach pains.
+23;2-context;In the waiting room there was a woman who had a temperature and a woman who seemed to have stomach pains.
+23;NP;The doctor examined the woman with the temperature but couldn't help her. 
+23;VP;The doctor examined the woman with the stethoscope but couldn't help her. 
+24;setup;A secretary was sitting at her desk on which was a manual typewriter. She was told to type up a report.
+24;1-context;She was handed a report covered in diagrams and a letter written in different colours.
+24;2-context;She was handed a report covered in diagrams and a report written in different colours.
+24;NP;The secretary typed up the report with the diagrams and then went to lunch.
+24;VP;The secretary typed up the report with the typewriter and then went to lunch.
+25;setup;A burglar was trying to break into a house and had a credit card in his hand. He wanted to open a door.
+25;1-context;He found a door which had a faulty lock and a window which had a cracked frame.
+25;2-context;He found a door which had a faulty lock and a door which had a cracked frame.
+25;NP;The burglar opened the door with the faulty lock and quickiy slipped inside. 
+25;VP;The burglar opened the door with the credit card and quickiy slipped inside. 
+26;setup;A cleaning lady started on her morning rounds carrying a brush. She would have to clean a corridor that morning.
+26;1-context;In the building there was a corridor which had lots of plants along it and a lounge which had lots of pictures on the walls.
+26;2-context;In the building there was a corridor which had lots of plants along it and a corridor which had lots of pictures on the walls.
+26;NP;The cleaning lady cleaned the corridor with the plants and then lit a cigarette.
+26;VP;The cleaning lady cleaned the corridor with the brush and then lit a cigarette.
+27;setup;A woman was looking through some clothes while holding some darning wool. She needed to repair a sock.
+27;1-context;She found in the pile of clothes a sock which had a hole in it and a jumper which was getting a bit thin.
+27;2-context;She found in the pile of clothes a sock which had a hole in it and a sock which was getting a bit thin.
+27;NP;The woman repaired the sock with the hole but hurt her finger in the process. 
+27;VP;The woman repaired the sock with the wool but hurt her finger in the process. 
+28;setup;A little boy was playing in a garden kicking a ball about. He was warned that he’d probably break a window.
+28;1-context;Close to him was a window which had a crack in it and a statue that looked very old.
+28;2-context;Close to him was a window which had a crack in it and a window that looked very old.
+28;NP;The boy did accidentally break the window with the crack and ran home crying. 
+28;VP;The boy did accidentally break the window with the ball and ran home crying. 
+29;setup;A chef was working in his kitchen by a food mixer. He was preparing to make a cake.
+29;1-context;Somebody came into the kitchen and asked him to bake a cake containing dried fruit and a pie topped with jam. 
+29;2-context;Somebody came into the kitchen and asked him to bake a cake containing dried fruit and a cake topped with jam. 
+29;NP;The chef started to make the cake with the dried fruit but ran out of eggs. 
+29;VP;The chef started to make the cake with the food mixer but ran out of eggs. 
+30;setup;A gardener was working in a garden adjusting a chainsaw. He needed to cut down a tree.
+30;1-context;He was standing by a tree covered in greenfly and a tall shrub which had been dead a long time.
+30;2-context;He was standing by a tree covered in greenfly and a tree which had been dead a long time.
+30;NP;The gardener cut down the tree with the greenfly but was very sad about it. 
+30;VP;The gardener cut down the tree with the chainsaw but was very sad about it. 
+31;setup;A detective was sitting at a window holding a set of binoculars. He’d been asked to watch a woman.
+31;1-context;In the room he was looking into there was a woman holding a revolver and a man holding a grenade.
+31;2-context;In the room he was looking into there was a woman holding a revolver and a woman holding a grenade.
+31;NP;The detective watched the woman with the revolver and then made a phone call. 
+31;VP;The detective watched the woman with the binoculars and then made a phone call. 
+32;setup;A man was decorating a room and had with him a large brush. He’d decided to paint a door.
+32;1-context;In the room there was a door which had a large crack in it and a window which wouldn’t close.
+32;2-context;In the room there was a door which had a large crack in it and a door which wouldn’t close.
+32;NP;The man decided to paint the door with the large crack and do the window later. 
+32;VP;The man decided to paint the door with the large brush and do the window later. 

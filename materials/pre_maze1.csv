@@ -1,0 +1,160 @@
+setup;1_1;A burglar broke into a bank carrying some dynamite. He planned to blow open a safe. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+1-context;1_2;Once inside he saw that there was a safe which had a new lock and a strongbox which had an old lock. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22
+2-context;1_2;Once inside he saw that there was a safe which had a new lock and a safe which had an old lock. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22
+NP;1_3;The burglar blew open the safe with the new lockand made off with the loot.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+VP;1_3;The burglar blew open the safe with the dynamite and made off with the loot.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+setup;2_1;A mechanic walked up to a car carrying a monkey wrench. He thought he’d have to change a tyre. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+1-context;2_2;On examining the car he found that there was a tyre which had a faulty valve and a fuel line which had a small hole in it. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27
+2-context;2_2;On examining the car he found that there was a tyre which had a faulty valve and a tyre which had a small hole in it. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26
+NP;2_3;The mechanic changed the tyre with the faulty valve but it took a long time.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+VP;2_3;The mechanic changed the tyre with the monkey wrench but it took a long time.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+setup;3_1;A convict escaped from his cell clutching a knife. He was prepared to attack a warder if necessary. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+1-context;3_2;Once outside he saw a warder holding a bunch of keys and a policeman holding a long truncheon. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+2-context;3_2;Once outside he saw a warder holding a bunch of keys and a warden holding a long truncheon.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+NP;3_3;The convict suddenly lunged at the warder with the keys before running off.;1 2 3 4 5 6 7 8 9 10 11 12 13
+VP;3_3;The convict suddenly lunged at the warder with the knife before running off.;1 2 3 4 5 6 7 8 9 10 11 12 13
+setup;4_1;A schoolteacher walked into class carrying a bamboo cane. He sadistically hoped that he would have to beat a boy.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+1-context;4_2;On entering he saw that a boy who had a broken leg and a girl who wore glasses didn’t stand up for him.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+2-context;4_2;On entering he saw that a boy who had a broken leg and a boy who wore glasses didn’t stand up for him.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+NP;4_3;The schoolteacher beat the boy with the broken leg but the boy didn’t cry out.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+VP;4_3;The schoolteacher beat the boy with the bamboo cane but the boy didn’t cry out.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+setup;5_1;John had bought a diamond stylus for his stereo. He planned to play a record. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+1-context;5_2;He’d been given a record which had a lot of noisy crackle and a cassette which had a lot of hiss.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+2-context;5_2;He’d been given a record which had a lot of noisy crackle and a record which had a lot of hiss.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+NP;5_3;John decided to play the record with the noisy crackle but it sounded terrible.;1 2 3 4 5 6 7 8 9 10 11 12 13 14
+VP;5_3;John decided to play the record with the diamond stylus but it sounded terrible.;1 2 3 4 5 6 7 8 9 10 11 12 13 14
+setup;6_1;A historian was working in the British Museum holding a magnifying glass. He’d sat down to study a map.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+1-context;6_2;On his desk there was a map which had an appalling tear and a manuscript which seemed in perfect condition.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+2-context;6_2;On his desk there was a map which had an appalling tear and a map which seemed in perfect condition.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+NP;6_3;The historian had to study the map with the appalling tear so as to value it.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+VP;6_3;The historian had to study the map with the magnifying glass so as to value it.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+setup;7_1;An artist was working at a table holding a long brush. He had a sudden premonition that he was going to knock over a bottle.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+1-context;7_2;On the table there was a bottle containing some paint and a small jug filled with water.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+2-context;7_2;On the table there was a bottle containing some paint and a bottle filled with water.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+NP;7_3;The artist accidently knocked over the bottle with the paint and swore loudly.;1 2 3 4 5 6 7 8 9 10 11 12 13
+VP;7_3;The artist accidently knocked over the bottle with the brush and swore loudly.;1 2 3 4 5 6 7 8 9 10 11 12 13
+setup;8_1;A window cleaner was climbing his ladder clutching a cloth. He’d been asked to wipe a window. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+1-context;8_2;Once up the ladder he saw that there was a window which had a lot of dirt on it and a skylight which was relatively clean. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26
+2-context;8_2;Once up the ladder he saw that there was a window which had a lot of dirt on it and a window which was relatively clean. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26
+NP;8_3;The window cleaner wiped the window with the dirt while singing to himself.;1 2 3 4 5 6 7 8 9 10 11 12 13
+VP;8_3;The window cleaner wiped the window with the cloth while singing to himself.;1 2 3 4 5 6 7 8 9 10 11 12 13
+setup;9_1;A workman climbed down a manhole carrying a saw. He expected to have to cut through a valve.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+1-context;9_2;Down the manhole he found a valve which had a lot of rust on it and a section of pipe which had been leaking gas.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+2-context;9_2;Down the manhole he found a valve which had a lot of rust on it and a valve which had been leaking gas.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+NP;9_3;The workman cut through the valve with the rust before fitting a new one. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14
+VP;9_3;The workman cut through the valve with the saw before fitting a new one. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14
+setup;10_1;A man was walking up and down a dark street carrying an iron crowbar. He hoped to break into a shop.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+1-context;10_2;He noticed that there was a shop which had a broken window and a post office which was fitted with a burglar alarm. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+2-context;10_2;He noticed that there was a shop which had a broken window and a shop which was fitted with a burglar alarm. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22
+NP;10_3;The man broke into the shop with the broken window but nobody saw him.;1 2 3 4 5 6 7 8 9 10 11 12 13 14
+VP;10_3;The man broke into the shop with the iron crowbar but nobody saw him.;1 2 3 4 5 6 7 8 9 10 11 12 13 14
+setup;11_1;A monkey had been trained to eat using a fork. It was supposed to eat a banana.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+1-context;11_2;It was given a banana which had a bruise on it and an apple that was perfect.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+2-context;11_2;It was given a banana which had a bruise on it and a banana that was perfect.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+NP;11_3;The monkey ate the banana with the bruise much to everyone’s surprise. ;1 2 3 4 5 6 7 8 9 10 11 12
+VP;11_3;The monkey ate the banana with the fork much to everyone’s surprise. ;1 2 3 4 5 6 7 8 9 10 11 12
+setup;12_1;A caretaker was walking along a corridor carrying some nails. He’d been told to repair a door.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+1-context;12_2;He saw a door which had a large crack in it and a locker which wouldn’t shut properly.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+2-context;12_2;He saw a door which had a large crack in it and a door which wouldn’t shut properly.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+NP;12_3;The caretaker repaired the door with the crack and then took a tea break. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14
+VP;12_3;The caretaker repaired the door with the nails and then took a tea break. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14
+setup;13_1;A skinhead was walking along a street carrying a large knife. He was planning to attack a policeman.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+1-context;13_2;He eventually saw a policeman who had a large scar on his face and a policewoman wearing spectacles.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+2-context;13_2;He eventually saw a policeman who had a large scar on his face and a policeman wearing spectacles.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+NP;13_3;The skinhead suddenly attacked the policeman with the scar and then ran off.;1 2 3 4 5 6 7 8 9 10 11 12 13
+VP;13_3;The skinhead suddenly attacked the policeman with the knife and then ran off.;1 2 3 4 5 6 7 8 9 10 11 12 13
+setup;14_1;A dressmaker was working on a dress using a pair of scissors. She had to cut some material for the pockets. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+1-context;14_2;She had a piece of material which had a pattern on it and a piece of leather which was plain.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+2-context;14_2;She had a piece of material which had a pattern on it and a piece of material which was plain.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+NP;14_3;The dressmaker cut the material with the pattern and then went to have lunch.;1 2 3 4 5 6 7 8 9 10 11 12 13 14
+VP;14_3;The dressmaker cut the material with the scissors and then went to have lunch.;1 2 3 4 5 6 7 8 9 10 11 12 13 14
+setup;15_1;A fireman was running to the scene of a fire carrying a heavy axe. He had to smash down a door.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+1-context;15_2;When he got to the scene of the fire he found a door which had a very rusty lock and a window which was nailed shut.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26
+2-context;15_2;When he got to the scene of the fire he found a door which had a very rusty lock and a door which was nailed shut.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26
+NP;15_3;The fireman smashed down the door with the rusty lock but smoke overcame him. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14
+VP;15_3;The fireman smashed down the door with the heavy axe but smoke overcame him. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14
+setup;16_1;A little girl borrowed from the kitchen a bread knife. She wanted to cut an orange into pieces. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+1-context;16_2;She found in the fruit bowl an orange which had a very thick rind and a tangerine which had a thin rind.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22
+2-context;16_2;She found in the fruit bowl an orange which had a very thick rind and an orange which had a thin rind.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22
+NP;16_3;The little girl tried to cut the orange with the thick rind but to no success. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+VP;16_3;The little girl tried to cut the orange with the bread knife but to no success. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+setup;17_1;A chemist was adjusting a bunsen burner. He was about to heat up a solution. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+1-context;17_2;On his bench there was a solution which had biue crystals in it and a powder containing red dye.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+2-context;17_2;On his bench there was a solution which had biue crystals in it and a solution containing red dye.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+NP;17_3;The chemist heated the solution with the blue crystals but the gas went out. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14
+VP;17_3;The chemist heated the solution with the bunsen burner but the gas went out. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14
+setup;18_1;A drunk was walking along a street wielding an empty bottle. He felt like smashing a window.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+1-context;18_2;In front of him he saw a window made of stained glass and a glass door which had bars covering it.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+2-context;18_2;In front of him he saw a window made of stained glass and a window which had bars covering it.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+NP;18_3;The drunk smashed the window with the stained glass and staggered off laughing. ;1 2 3 4 5 6 7 8 9 10 11 12 13
+VP;18_3;The drunk smashed the window with the empty bottle and staggered off laughing. ;1 2 3 4 5 6 7 8 9 10 11 12 13
+setup;19_1;A vet went into an animal cage carrying a dart gun. He had to tranquilise a lion.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+1-context;19_2;Inside the cage there was a lion that had a big mane and a puma that didn’t have any mane at all.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22
+2-context;19_2;Inside the cage there was a lion that had a big mane and a lion that didn’t have any mane at all.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22
+NP;19_3;The vet tranquilised the lion with the big mane and then examined it. ;1 2 3 4 5 6 7 8 9 10 11 12 13
+VP;19_3;The vet tranquilised the lion with the dart gun and then examined it. ;1 2 3 4 5 6 7 8 9 10 11 12 13
+setup;20_1;A tribesman was running through the forest carrying a long spear. He intended to kill a lion.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+1-context;20_2;On arriving at a clearing he found a lion which had very sharp teeth and a tiger which had strange coloured paws.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22
+2-context;20_2;On arriving at a clearing he found a lion which had very sharp teeth and a lion which had strange coloured paws.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22
+NP;20_3;The tribesman killed the tion with the sharp teeth and carried it back home.;1 2 3 4 5 6 7 8 9 10 11 12 13 14
+VP;20_3;The tribesman killed the tion with the long spear and carried it back home.;1 2 3 4 5 6 7 8 9 10 11 12 13 14
+setup;21_1;A demolition man was on his way to work in his bulldozer. He’d been told to go to a particular address to demolish a house.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+1-context;21_2;Once at the address he found a house which had an orate fountain in its garden and a church covered in fine carvings.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+2-context;21_2;Once at the address he found a house which had an orate fountain in its garden and a house covered in fine carvings.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+NP;21_3;The man demolished the house with the fountain but it wasn’t the right one.;1 2 3 4 5 6 7 8 9 10 11 12 13 14
+VP;21_3;The man demolished the house with the bulldozer but it wasn’t the right one.;1 2 3 4 5 6 7 8 9 10 11 12 13 14
+setup;22_1;A furniture restorer was getting out some paint stripper. He’d been asked to strip a cabinet.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+1-context;22_2;In his workshop there was a cabinet which had brass hinges and a chest which had aluminium hinges.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+2-context;22_2;In his workshop there was a cabinet which had brass hinges and a cabinet which had aluminium hinges.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+NP;22_3;The restorer stripped the cabinet with the brass hinges and then waxed it.;1 2 3 4 5 6 7 8 9 10 11 12 13
+VP;22_3;The restorer stripped the cabinet with the paint stripper and then waxed it.;1 2 3 4 5 6 7 8 9 10 11 12 13
+setup;23_1;A doctor walked into a waiting room carrying a stethoscope. He’d arranged to examine a woman patient.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+1-context;23_2;In the waiting room there was a woman who had a temperature and a man who seemed to have stomach pains.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+2-context;23_2;In the waiting room there was a woman who had a temperature and a woman who seemed to have stomach pains.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+NP;23_3;The doctor examined the woman with the temperature but couldn't help her. ;1 2 3 4 5 6 7 8 9 10 11 12
+VP;23_3;The doctor examined the woman with the stethoscope but couldn't help her. ;1 2 3 4 5 6 7 8 9 10 11 12
+setup;24_1;A secretary was sitting at her desk on which was a manual typewriter. She was told to type up a report.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+1-context;24_2;She was handed a report covered in diagrams and a letter written in different colours.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+2-context;24_2;She was handed a report covered in diagrams and a report written in different colours.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+NP;24_3;The secretary typed up the report with the diagrams and then went to lunch.;1 2 3 4 5 6 7 8 9 10 11 12 13 14
+VP;24_3;The secretary typed up the report with the typewriter and then went to lunch.;1 2 3 4 5 6 7 8 9 10 11 12 13 14
+setup;25_1;A burglar was trying to break into a house and had a credit card in his hand. He wanted to open a door.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+1-context;25_2;He found a door which had a faulty lock and a window which had a cracked frame.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+2-context;25_2;He found a door which had a faulty lock and a door which had a cracked frame.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+NP;25_3;The burglar opened the door with the faulty lock and quickiy slipped inside. ;1 2 3 4 5 6 7 8 9 10 11 12 13
+VP;25_3;The burglar opened the door with the credit card and quickiy slipped inside. ;1 2 3 4 5 6 7 8 9 10 11 12 13
+setup;26_1;A cleaning lady started on her morning rounds carrying a brush. She would have to clean a corridor that morning.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+1-context;26_2;In the building there was a corridor which had lots of plants along it and a lounge which had lots of pictures on the walls.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+2-context;26_2;In the building there was a corridor which had lots of plants along it and a corridor which had lots of pictures on the walls.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+NP;26_3;The cleaning lady cleaned the corridor with the plants and then lit a cigarette.;1 2 3 4 5 6 7 8 9 10 11 12 13 14
+VP;26_3;The cleaning lady cleaned the corridor with the brush and then lit a cigarette.;1 2 3 4 5 6 7 8 9 10 11 12 13 14
+setup;27_1;A woman was looking through some clothes while holding some darning wool. She needed to repair a sock.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+1-context;27_2;She found in the pile of clothes a sock which had a hole in it and a jumper which was getting a bit thin.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
+2-context;27_2;She found in the pile of clothes a sock which had a hole in it and a sock which was getting a bit thin.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
+NP;27_3;The woman repaired the sock with the hole but hurt her finger in the process. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+VP;27_3;The woman repaired the sock with the wool but hurt her finger in the process. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+setup;28_1;A little boy was playing in a garden kicking a ball about. He was warned that he’d probably break a window.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+1-context;28_2;Close to him was a window which had a crack in it and a statue that looked very old.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+2-context;28_2;Close to him was a window which had a crack in it and a window that looked very old.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+NP;28_3;The boy did accidentally break the window with the crack and ran home crying. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14
+VP;28_3;The boy did accidentally break the window with the ball and ran home crying. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14
+setup;29_1;A chef was working in his kitchen by a food mixer. He was preparing to make a cake.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+1-context;29_2;Somebody came into the kitchen and asked him to bake a cake containing dried fruit and a pie topped with jam. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+2-context;29_2;Somebody came into the kitchen and asked him to bake a cake containing dried fruit and a cake topped with jam. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+NP;29_3;The chef started to make the cake with the dried fruit but ran out of eggs. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+VP;29_3;The chef started to make the cake with the food mixer but ran out of eggs. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+setup;30_1;A gardener was working in a garden adjusting a chainsaw. He needed to cut down a tree.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+1-context;30_2;He was standing by a tree covered in greenfly and a tall shrub which had been dead a long time.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+2-context;30_2;He was standing by a tree covered in greenfly and a tree which had been dead a long time.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+NP;30_3;The gardener cut down the tree with the greenfly but was very sad about it. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+VP;30_3;The gardener cut down the tree with the chainsaw but was very sad about it. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+setup;31_1;A detective was sitting at a window holding a set of binoculars. He’d been asked to watch a woman.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+1-context;31_2;In the room he was looking into there was a woman holding a revolver and a man holding a grenade.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+2-context;31_2;In the room he was looking into there was a woman holding a revolver and a woman holding a grenade.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+NP;31_3;The detective watched the woman with the revolver and then made a phone call. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14
+VP;31_3;The detective watched the woman with the binoculars and then made a phone call. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14
+setup;32_1;A man was decorating a room and had with him a large brush. He’d decided to paint a door.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+1-context;32_2;In the room there was a door which had a large crack in it and a window which wouldn’t close.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+2-context;32_2;In the room there was a door which had a large crack in it and a door which wouldn’t close.;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+NP;32_3;The man decided to paint the door with the large crack and do the window later. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+VP;32_3;The man decided to paint the door with the large brush and do the window later. ;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
