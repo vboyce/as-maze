@@ -36,6 +36,7 @@ import {
   POST_SURVEY_TEXT,
   DEBRIEF,
   INSTRUCTIONS,
+  INSTRUCTIONS2,
 } from "./instructions.js";
 /**
  * This function will be executed by jsPsych Builder and is expected to run the jsPsych experiment
@@ -44,6 +45,7 @@ import {
  */
 
 const NUM_ITEMS = 16;
+let done = 1;
 const BONUS = 5;
 
 const select_stimuli = subset(stimuli, NUM_ITEMS);
@@ -91,6 +93,12 @@ export async function run({
     response_ends_trial: true,
   };
 
+  let instructions2 = {
+    type: HtmlButtonResponsePlugin,
+    stimulus: INSTRUCTIONS2,
+    choices: ["Continue"],
+    response_ends_trial: true,
+  };
   let post_test_questions = {
     type: SurveyTextPlugin,
     preamble: POST_SURVEY_TEXT,
@@ -115,108 +123,32 @@ export async function run({
     type: MazePlugin,
     correct: jsPsych.timelineVariable("correct"),
     distractor: jsPsych.timelineVariable("distractor"),
-  };
-
-  /*let trial = {
-    type: SprButtonPlugin,
+    css_classes: ["maze-display"],
     prompt: function () {
-      return format_header(done, trials, countCorrect, BONUS);
-    },
-    style: "all",
-    enable_keypress: false,
-    feedback: "",
-    css_classes: ["tangram-display"],
-    stimulus: function () {
-      console.log(jsPsych.timelineVariable("tangram"));
-      return format_spr(jsPsych.timelineVariable("text"));
-    },
-    button_choices: choices,
-    button_html: choices.map((choice, ind) => {
-      var html =
-        '<button class="tangram">' +
-        '<img src="assets/images/tangram_' +
-        choice +
-        '.png">' +
-        "</button>";
-
-      return html;
-    }),
-    data: {
-      gameId: jsPsych.timelineVariable("gameId"),
-      correct_tangram: jsPsych.timelineVariable("tangram"),
-      condition: jsPsych.timelineVariable("size_round"),
-      text: jsPsych.timelineVariable("text"),
-      type: "selection",
-    },
-    on_finish: function (data) {
-      data.selected = choices[data.response];
-      if (
-        jsPsych.pluginAPI.compareKeys(
-          choices[data.response],
-          jsPsych.timelineVariable("tangram")
-        )
-      ) {
-        data.correct = true;
-      } else {
-        data.correct = false;
-      }
-      if (data.correct) {
-        countCorrect++;
-      }
+      return format_header(done, trials);
     },
   };
 
-  let feedback = {
-    type: SprButtonPlugin,
-    feedback: function () {
-      var last_trial_correct = jsPsych.data.get().last(1).values()[0].correct;
-      return give_feedback(last_trial_correct);
-    },
+  let practice = {
+    type: MazePlugin,
+    correct:
+      "This is a practice sentence that you are reading one word at a time.",
+    distractor:
+      "x-x-x whom knew appeared emotions know dad lake edition jack fans fund grow died.",
+    css_classes: ["maze-display"],
     prompt: function () {
-      return format_header(done, trials, countCorrect, BONUS);
+      return "<p>Practice</p><p> Select the next word by pressing <b>e</b> (left) or <b>i</b> (right).</p>";
     },
-    style: "all",
-    enable_keypress: false,
-    css_classes: ["tangram-display"],
-    data: { type: "feedback" },
-    stimulus: function () {
-      return format_spr(jsPsych.timelineVariable("text"));
-    },
-    button_choices: choices,
-    button_style: function () {
-      var chosen = jsPsych.data.get().last(1).values()[0].selected;
-      var highlight = jsPsych.data.get().last(1).values()[0].correct
-        ? "border: 4px solid #006400; border-radius: 4px;"
-        : "border: 4px solid #FF0000; border-radius: 4px;";
-      let style = choices.map((choice, ind) => {
-        return chosen == choice ? highlight : "";
-      });
-      return style;
-    },
-    button_html: choices.map((choice, ind) => {
-      var html =
-        '<button class="tangram"' +
-        ">" +
-        '<img src="assets/images/tangram_' +
-        choice +
-        '.png">' +
-        "</button>";
-
-      return html;
-    }),
-    trial_duration: function () {
-      var last_trial_correct = jsPsych.data.get().last(1).values()[0].correct;
-      if (last_trial_correct) {
-        return 900;
-      } else {
-        return 900;
-      }
-    },
+  };
+  let spacer = {
+    type: HtmlButtonResponsePlugin,
+    stimulus: "",
+    choices: [],
+    trial_duration: 1000,
     on_finish: function () {
       done++;
     },
   };
- */
 
   function getTimeline() {
     //////////////// timeline /////////////////////////////////
@@ -224,15 +156,20 @@ export async function run({
 
     //timeline.push(preload);
 
-    //timeline.push(consent);
-    //timeline.push(instructions);
-    const test = {
-      timeline: [trial],
-      timeline_variables: select_stimuli,
-    };
-    timeline.push(test);
-    //timeline.push(post_test_questions);
-    //timeline.push(end_experiment);
+    timeline.push(consent);
+    timeline.push(instructions);
+    timeline.push(practice);
+    timeline.push(instructions2);
+    for (let i = 0; i < select_stimuli.length; i++) {
+      let mini_timeline = {
+        timeline: [trial],
+        timeline_variables: select_stimuli[i],
+      };
+      timeline.push(mini_timeline);
+      timeline.push(spacer);
+    }
+    timeline.push(post_test_questions);
+    timeline.push(end_experiment);
     timeline.push(send_data);
     return timeline;
   }

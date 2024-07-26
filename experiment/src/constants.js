@@ -7,14 +7,13 @@ export const all_images = choices.map(
   (c) => "assets/images/tangram_" + c + ".png"
 );
 
-export function format_header(done, trials, countCorrect, bonus) {
+export function format_header(done, trials) {
   return (
-    `Trial ` +
+    `<p>Story ` +
     done +
     `/` +
     trials +
-    ` &emsp; Bonus so far: $` +
-    (countCorrect * bonus) / 100
+    "</p><p> Select the next word by pressing <b>e</b> (left) or <b>i</b> (right).</p>"
   );
 }
 export function format_spr(stimuli) {

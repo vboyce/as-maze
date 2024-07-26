@@ -6,7 +6,7 @@ export const stimuli = [
     correct:
       "A burglar broke into a bank carrying some dynamite. He planned to blow open a safe.",
     distractor:
-      "x-x-x batters towns yeah vs info deserves miss nominate. x-x-x outcome jack wars deal same glad.",
+      "x-x-x packets marry term grow adds deserves yeah climates. x-x-x painful cent wars glad gift none.",
   },
   {
     type: "1-context",
@@ -15,7 +15,7 @@ export const stimuli = [
     correct:
       "Once inside he saw that there was a safe which had a new lock and a strongbox which had an old lock.",
     distractor:
-      "x-x-x senate guy mid yeah agree non ran dies feels pre app ago tend hate sad freedmen loved sir oh cent wars.",
+      "x-x-x senate dad sir fund agree lord vs died tells cent says ago mice sad pro eradicate worst pre oh yeah woke.",
   },
   {
     type: "2-context",
@@ -24,7 +24,7 @@ export const stimuli = [
     correct:
       "Once inside he saw that there was a safe which had a new lock and a safe which had an old lock.",
     distractor:
-      "x-x-x senate guy mid yeah agree non ran dies feels pre app ago tend hate sad freedmen loved sir oh cent wars.",
+      "x-x-x senate dad sir fund agree lord vs died tells cent says ago mice sad pro eradicate worst pre oh yeah woke.",
   },
   {
     type: "NP",
@@ -33,7 +33,7 @@ export const stimuli = [
     correct:
       "The burglar blew open the safe with the new lock and made off with the loot.",
     distractor:
-      "x-x-x oversee pork goes god thus glad seem owed tend pre hate sir lord mom vivo.",
+      "x-x-x denoted slim date yeah glad hate app explores earn sir wish ago lord fund alma.",
   },
   {
     type: "VP",
@@ -42,7 +42,7 @@ export const stimuli = [
     correct:
       "The burglar blew open the safe with the dynamite and made off with the loot.",
     distractor:
-      "x-x-x oversee pork goes god thus glad seem owed pre hate sir lord mom vivo.",
+      "x-x-x denoted slim date yeah glad hate app explores sir wish ago lord fund alma.",
   },
   {
     type: "setup",
@@ -51,7 +51,7 @@ export const stimuli = [
     correct:
       "A mechanic walked up to a car carrying a monkey wrench. He thought he’d have to change a tyre.",
     distractor:
-      "x-x-x meanings waters fund al lady nor memories ago oceans sharia. x-x-x amazing kiss sale hill months app zoos.",
+      "x-x-x habitats finals god cent soul sir churches yeah expand rarity. x-x-x amazing mess sale app senate pre dams.",
   },
   {
     type: "1-context",
@@ -60,7 +60,7 @@ export const stimuli = [
     correct:
       "On examining the car he found that there was a tyre which had a faulty valve and a fuel line which had a small hole in it.",
     distractor:
-      "x-x-x dispersed eat else cent river lady agree text app airs month sir lord trolls begun sick god lore holy games wild page seems dawn jobs glad.",
+      "x-x-x motivated hour whom al queen jack agree glad app airs games pre sir trolls hates hear lord rite holy happy page cent wrote dawn god knew.",
   },
   {
     type: "2-context",
@@ -69,7 +69,7 @@ export const stimuli = [
     correct:
       "On examining the car he found that there was a tyre which had a faulty valve and a tyre which had a small hole in it.",
     distractor:
-      "x-x-x dispersed eat else cent river lady agree text app airs month sir lord trolls begun sick god lore games wild page seems dawn jobs glad.",
+      "x-x-x motivated hour whom al queen jack agree glad app airs games pre sir trolls hates hear lord rite happy page cent wrote dawn god knew.",
   },
   {
     type: "NP",
@@ -78,7 +78,7 @@ export const stimuli = [
     correct:
       "The mechanic changed the tyre with the faulty valve but it took a long time.",
     distractor:
-      "x-x-x authored western glad lows gone lord preach amend pre app sick sir ones hear.",
+      "x-x-x marketed seconds miss oaks sick died preach uphold eat fund hate hall hear born.",
   },
   {
     type: "VP",
@@ -87,7 +87,7 @@ export const stimuli = [
     correct:
       "The mechanic changed the tyre with the monkey wrench but it took a long time.",
     distractor:
-      "x-x-x authored western glad lows gone lord preach amend pre app sick sir ones hear.",
+      "x-x-x marketed seconds miss oaks sick died preach uphold eat fund hate hall hear born.",
   },
   {
     type: "setup",
@@ -96,7 +96,7 @@ export const stimuli = [
     correct:
       "A convict escaped from his cell clutching a knife. He was prepared to attack a warden if necessary.",
     distractor:
-      "x-x-x rumours insulin okay glad cent hatchback add kings. x-x-x lot bathroom drop except wish theses buy ourselves.",
+      "x-x-x mergers aspects nice glad adds medicinal know kings. x-x-x lot memories lose except guy denote ones celebrate.",
   },
   {
     type: "1-context",
@@ -105,7 +105,7 @@ export const stimuli = [
     correct:
       "Once outside he saw a warden holding a bunch of keys and a policeman holding a long truncheon.",
     distractor:
-      "x-x-x reasons kid mid am toxins sources cent aside act euro app mean terminate eastern ago lose isotropic.",
+      "x-x-x profile dad pre am waived sources oh hates us owns year mean optimism eastern vs laws canonized.",
   },
   {
     type: "2-context",
@@ -114,7 +114,7 @@ export const stimuli = [
     correct:
       "Once outside he saw a warden holding a bunch of keys and a warden holding a long truncheon.",
     distractor:
-      "x-x-x reasons kid mid am toxins sources cent aside act euro app mean terminate eastern ago lose isotropic.",
+      "x-x-x profile dad pre am waived sources oh hates us owns year mean optimism eastern vs laws canonized.",
   },
   {
     type: "NP",
@@ -123,7 +123,7 @@ export const stimuli = [
     correct:
       "The convict suddenly lunged at the warden with the keys before running off.",
     distractor:
-      "x-x-x expands upcoming gneiss lake app worded nice know acres senate awesome fund.",
+      "x-x-x waivers vacation amicus fund done loaned miss ago meets wonder website app.",
   },
   {
     type: "VP",
@@ -132,7 +132,7 @@ export const stimuli = [
     correct:
       "The convict suddenly lunged at the warden with the knife before running off.",
     distractor:
-      "x-x-x expands upcoming gneiss lake app worded nice know acres senate awesome fund.",
+      "x-x-x waivers vacation amicus fund done loaned miss ago meets wonder website app.",
   },
   {
     type: "setup",
@@ -141,7 +141,7 @@ export const stimuli = [
     correct:
       "A schoolteacher walked into class carrying a bamboo cane. He sadistically hoped that he would have to beat a boy.",
     distractor:
-      "x-x-x interruptions finals fund heard mentally miss uneasy lieu. x-x-x emplacements carol cent vs sweet anti app wars eat nor.",
+      "x-x-x disagreements decade lake heard democrat miss attest vain. x-x-x emplacements carol lady jack mouth anti hill cops bag nor.",
   },
   {
     type: "1-context",
@@ -150,7 +150,7 @@ export const stimuli = [
     correct:
       "On entering he saw that a boy who had a broken leg and a girl who wore glasses didn't stand up for him.",
     distractor:
-      "x-x-x deserved guys anti glad rose nor cash cent fund prices sake pre vs sir laws axis tuition chance miles al app plus.",
+      "x-x-x deserved okay luck jack miss nor ways mid sale prices via tax vs till anti sour achieve market types al soul plus.",
   },
   {
     type: "2-context",
@@ -159,7 +159,7 @@ export const stimuli = [
     correct:
       "On entering he saw that a boy who had a broken leg and a boy who wore glasses didn't stand up for him.",
     distractor:
-      "x-x-x deserved guys anti glad rose nor cash cent fund prices sake pre vs sir laws axis tuition chance miles al app plus.",
+      "x-x-x deserved okay luck jack miss nor ways mid sale prices via tax vs till anti sour achieve market types al soul plus.",
   },
   {
     type: "NP",
@@ -168,7 +168,7 @@ export const stimuli = [
     correct:
       "The schoolteacher beat the boy with the broken leg but the boy didn't cry out.",
     distractor:
-      "x-x-x redistributed lane wish pray mean yeah exists warn pre fund nor global wars bill.",
+      "x-x-x characterised anti seem nor date know exists vary fact sale via global wars laws.",
   },
   {
     type: "VP",
@@ -177,7 +177,7 @@ export const stimuli = [
     correct:
       "The schoolteacher beat the boy with the bamboo cane but the boy didn't cry out.",
     distractor:
-      "x-x-x redistributed lane wish pray mean yeah exists warn pre fund nor global wars bill.",
+      "x-x-x characterised anti seem nor date know exists vary fact sale via global wars laws.",
   },
   {
     type: "setup",
@@ -186,7 +186,7 @@ export const stimuli = [
     correct:
       "John had bought a diamond stylus for his stereo. He planned to play a record.",
     distractor:
-      "x-x-x door update miss centers futile guys sir thrive. x-x-x choices kid gets ask prices.",
+      "x-x-x sale sector oh centers shrubs sad than lessen. x-x-x affairs kid guys ago except.",
   },
   {
     type: "1-context",
@@ -195,7 +195,7 @@ export const stimuli = [
     correct:
       "He’d been given a record which had a lot of noisy crackle and a cassette which had a lot of hiss.",
     distractor:
-      "x-x-x hall areas vs passes feels hate step app lake renew submits cent lord habitats apply pre al nor hill brig.",
+      "x-x-x jack items vs styles feels hate dad nor ways stalk wettest join lord examines teams east pro eat cat writ.",
   },
   {
     type: "2-context",
@@ -204,7 +204,7 @@ export const stimuli = [
     correct:
       "He’d been given a record which had a lot of noisy crackle and a record which had a lot of hiss.",
     distractor:
-      "x-x-x hall areas vs passes feels hate step app lake renew submits cent lord habitats apply pre al nor hill brig.",
+      "x-x-x jack items vs styles feels hate dad nor ways stalk wettest join lord examines teams east pro eat cat writ.",
   },
   {
     type: "NP",
@@ -213,7 +213,7 @@ export const stimuli = [
     correct:
       "John decided to play the record with the noisy crackle but it sounded terrible.",
     distractor:
-      "x-x-x affairs sir anti bill expect hate knew argues preside safe app midwest diseases.",
+      "x-x-x affairs al anti bill expect wear seem ought secede risk hill compete internet.",
   },
   {
     type: "VP",
@@ -222,7 +222,7 @@ export const stimuli = [
     correct:
       "John decided to play the record with the diamond stylus but it sounded terrible.",
     distractor:
-      "x-x-x affairs sir anti bill expect hate knew argues preside safe app midwest diseases.",
+      "x-x-x affairs al anti bill expect wear seem ought secede risk hill compete internet.",
   },
   {
     type: "setup",
@@ -231,7 +231,7 @@ export const stimuli = [
     correct:
       "A historian was working in the British Museum holding a magnifying glass. He’d sat down to study a map.",
     distractor:
-      "x-x-x charities luck dollars link dad Appears Starts seconds gets antimatter prior. x-x-x odds park al miles miss onto.",
+      "x-x-x aftermath luck dollars al hurt Happens Forget require lose dermatitis ideas. x-x-x odds idea hate miles bet suck.",
   },
   {
     type: "1-context",
@@ -240,7 +240,7 @@ export const stimuli = [
     correct:
       "On his desk there was a map which had an appalling tear and a manuscript which seemed in perfect condition.",
     distractor:
-      "x-x-x bag bugs sorry jack cent nor wants hate yeah eradicate pets ask app announces teams salary plan happens institute.",
+      "x-x-x dad tons queen soul knew whom goals mom vote cosmetics pigs kids pro investing trump salary girl happens employees.",
   },
   {
     type: "2-context",
@@ -249,7 +249,7 @@ export const stimuli = [
     correct:
       "On his desk there was a map which had an appalling tear and a map which seemed in perfect condition.",
     distractor:
-      "x-x-x bag bugs sorry jack cent nor wants hate yeah eradicate pets ask app announces teams salary plan happens institute.",
+      "x-x-x dad tons queen soul knew whom goals mom vote cosmetics pigs kids pro investing trump salary girl happens employees.",
   },
   {
     type: "NP",
@@ -258,7 +258,7 @@ export const stimuli = [
     correct:
       "The historian had to study the map with the appalling tear so as to value it.",
     distractor:
-      "x-x-x propelled dad vs miles mom sir yeah glad stimulates marry sell app walk types jack.",
+      "x-x-x adulthood kids oh china door bye wait eat reimbursed whom mom card rise types bill.",
   },
   {
     type: "VP",
@@ -267,7 +267,7 @@ export const stimuli = [
     correct:
       "The historian had to study the map with the magnifying glass so as to value it.",
     distractor:
-      "x-x-x propelled dad vs miles mom sir yeah glad stimulates marry sell app walk types jack.",
+      "x-x-x adulthood kids oh china door bye wait eat reimbursed whom mom card rise types bill.",
   },
   {
     type: "setup",
@@ -276,7 +276,7 @@ export const stimuli = [
     correct:
       "An artist was working at a table holding a long brush. He had a sudden premonition that he was going to knock over a bottle.",
     distractor:
-      "x-x-x forgot pre percent al hate shall matters sir goes twins. x-x-x miss cent speaks symbolizing lots nor wood rates fund donor yeah app ethics.",
+      "x-x-x drinks guys anymore push eat apply nations non goes spite. x-x-x else am throws symbolizing lots hill wood basis same sizes gift hear beings.",
   },
   {
     type: "1-context",
@@ -285,7 +285,7 @@ export const stimuli = [
     correct:
       "On the table there was a bottle containing some paint and a small jug filled with water.",
     distractor:
-      "x-x-x lord aware weird anti cent aboard girlfriend know marry vote vs rates bop desire loss learn.",
+      "x-x-x bag aware sorry okay knew abroad interviews bill relax ask vote blame vows defend move agree.",
   },
   {
     type: "2-context",
@@ -294,7 +294,7 @@ export const stimuli = [
     correct:
       "On the table there was a bottle containing some paint and a bottle filled with water.",
     distractor:
-      "x-x-x lord aware weird anti cent aboard girlfriend know marry vote vs rates desire loss learn.",
+      "x-x-x bag aware sorry okay knew abroad interviews bill relax ask vote blame defend move agree.",
   },
   {
     type: "NP",
@@ -303,7 +303,7 @@ export const stimuli = [
     correct:
       "The artist accidently knocked over the bottle with the paint and swore loudly.",
     distractor:
-      "x-x-x toward fortresses colonel okay sale belong anti know ought sir verbs fulfil.",
+      "x-x-x anyway barristers verdict mean wish depend hear knew meets wait ethic barrow.",
   },
   {
     type: "VP",
@@ -312,7 +312,7 @@ export const stimuli = [
     correct:
       "The artist accidently knocked over the bottle with the brush and swore loudly.",
     distractor:
-      "x-x-x toward fortresses colonel okay sale belong anti know ought sir verbs fulfil.",
+      "x-x-x anyway barristers verdict mean wish depend hear knew meets wait ethic barrow.",
   },
   {
     type: "setup",
@@ -321,7 +321,7 @@ export const stimuli = [
     correct:
       "A window cleaner was climbing his ladder clutching a cloth. He’d been asked to wipe a window.",
     distractor:
-      "x-x-x prices hottest hate infinity sir aliens aggressor vs elect. x-x-x else river pre buds knew voters.",
+      "x-x-x photos hottest luck defenses know aliens omissions wish elect. x-x-x body coast link cubs ring courts.",
   },
   {
     type: "1-context",
@@ -330,7 +330,7 @@ export const stimuli = [
     correct:
       "Once up the ladder he saw that there was a window which had a lot of dirt on it and a skylight which was relatively clean.",
     distractor:
-      "x-x-x risk jack gladly mind anti cent agree mom knew afford terms hate sir else yeah saga glad vote note vs purged types app industries goals.",
+      "x-x-x fact god termed mind mid week worry page says awards apply mom know else van euro gift sold male pro accords rates cash statistics agree.",
   },
   {
     type: "2-context",
@@ -339,7 +339,7 @@ export const stimuli = [
     correct:
       "Once up the ladder he saw that there was a window which had a lot of dirt on it and a window which was relatively clean.",
     distractor:
-      "x-x-x risk jack gladly mind anti cent agree mom knew afford terms hate sir else yeah saga glad vote note vs purged types app industries goals.",
+      "x-x-x fact god termed mind mid week worry page says awards apply mom know else van euro gift sold male pro accords rates cash statistics agree.",
   },
   {
     type: "NP",
@@ -348,7 +348,7 @@ export const stimuli = [
     correct:
       "The window cleaner wiped the window with the dirt while singing to himself.",
     distractor:
-      "x-x-x afford innings debts sad belong hate sir sang worry deserve fund percent.",
+      "x-x-x afford insulin pence gift belong hope wish seeks worry deserve kill percent.",
   },
   {
     type: "VP",
@@ -357,7 +357,7 @@ export const stimuli = [
     correct:
       "The window cleaner wiped the window with the cloth while singing to himself.",
     distractor:
-      "x-x-x afford innings debts sad belong hate sir sang worry deserve fund percent.",
+      "x-x-x afford insulin pence gift belong hope wish seeks worry deserve kill percent.",
   },
   {
     type: "setup",
@@ -366,7 +366,7 @@ export const stimuli = [
     correct:
       "A workman climbed down a manhole carrying a saw. He expected to have to cut through a valve.",
     distractor:
-      "x-x-x sorties hobbies kill wish atrophy feedback oh nor. x-x-x feelings jack lady yeah kid imagine sir ought.",
+      "x-x-x revolts liquids deal cat freemen expenses lose whom. x-x-x feelings bag than says kid imagine mom versa.",
   },
   {
     type: "1-context",
@@ -375,7 +375,7 @@ export const stimuli = [
     correct:
       "Down the manhole he found a valve which had a lot of rust on it and a section of pipe which had been leaking gas.",
     distractor:
-      "x-x-x luck confers cool worse jack acids goals whom app says our jays page guys risk pro visits self thru learn hate gift raccoon tour.",
+      "x-x-x wait aspired sure truth lot acids sorry hill page jobs lake cubs list hour god laws ethnic self pros goals male vote rallies sell.",
   },
   {
     type: "2-context",
@@ -384,7 +384,7 @@ export const stimuli = [
     correct:
       "Down the manhole he found a valve which had a lot of rust on it and a valve which had been leaking gas.",
     distractor:
-      "x-x-x luck confers cool worse jack acids goals whom app says our jays page guys risk pro visits learn hate gift raccoon tour.",
+      "x-x-x wait aspired sure truth lot acids sorry hill page jobs lake cubs list hour god laws ethnic goals male vote rallies sell.",
   },
   {
     type: "NP",
@@ -393,7 +393,7 @@ export const stimuli = [
     correct:
       "The workman cut through the valve with the rust before fitting a new one.",
     distractor:
-      "x-x-x buffers mid welcome wish slept glad hate whom expect studios kill him guys.",
+      "x-x-x denoted sad imagine okay forth poor says pays senate studios buy guys him.",
   },
   {
     type: "VP",
@@ -402,7 +402,7 @@ export const stimuli = [
     correct:
       "The workman cut through the valve with the saw before fitting a new one.",
     distractor:
-      "x-x-x buffers mid welcome wish slept glad hate whom expect studios kill him guys.",
+      "x-x-x denoted sad imagine okay forth poor says pays senate studios buy guys him.",
   },
   {
     type: "setup",
@@ -411,7 +411,7 @@ export const stimuli = [
     correct:
       "A man was walking up and down a dark street carrying an iron crowbar. He hoped to break into a shop.",
     distractor:
-      "x-x-x guys jack context al soul lord fund laws accept bacteria nor mode benthic. x-x-x eaten dad knows wish vs whom.",
+      "x-x-x hurt cool reflect lack bag ones soul laws videos brothers plan drew unpaved. x-x-x saint kid types guys seem info.",
   },
   {
     type: "1-context",
@@ -420,7 +420,7 @@ export const stimuli = [
     correct:
       "He noticed that there was a shop which had a broken window and a post office which was fitted with a burglar alarm.",
     distractor:
-      "x-x-x obvious jack shall side cent info apply yeah sir abroad videos hate vs whom myself agree holy clicks hear know inflict sided.",
+      "x-x-x obvious hour guess bill ran info apply sea note starts videos sad luck upon thinks worst holy proves hope goes inflict lakes.",
   },
   {
     type: "2-context",
@@ -429,7 +429,7 @@ export const stimuli = [
     correct:
       "He noticed that there was a shop which had a broken window and a shop which was fitted with a burglar alarm.",
     distractor:
-      "x-x-x obvious jack shall side cent info apply yeah sir abroad videos hate vs whom agree holy clicks hear know inflict sided.",
+      "x-x-x obvious hour guess bill ran info apply sea note starts videos sad luck upon worst holy proves hope goes inflict lakes.",
   },
   {
     type: "NP",
@@ -438,7 +438,7 @@ export const stimuli = [
     correct:
       "The man broke into the shop with the broken window but nobody saw him.",
     distractor:
-      "x-x-x seen woods date glad none hate seem helps staunch yeah senate pre term.",
+      "x-x-x seen roman okay send plus sure grow till unease non gender mid hour.",
   },
   {
     type: "VP",
@@ -447,7 +447,7 @@ export const stimuli = [
     correct:
       "The man broke into the shop with the iron crowbar but nobody saw him.",
     distractor:
-      "x-x-x seen woods date glad none hate seem helps staunch yeah senate pre term.",
+      "x-x-x seen roman okay send plus sure grow till unease non gender mid hour.",
   },
   {
     type: "setup",
@@ -456,7 +456,7 @@ export const stimuli = [
     correct:
       "A monkey had been trained to eat using a fork. It was supposed to eat a banana.",
     distractor:
-      "x-x-x exceed anti yeah depends bet app agree miss ruin. x-x-x else memories hair pre gain resign.",
+      "x-x-x rumors nice hall courses mark cops worst meet gigs. x-x-x else memories send info gain resign.",
   },
   {
     type: "1-context",
@@ -465,7 +465,7 @@ export const stimuli = [
     correct:
       "It was given a banana which had a bruise on it and an apple that was perfect.",
     distractor:
-      "x-x-x luck worry dad inning loved hate yeah skiers sir guys fear miss fails anti okay realize.",
+      "x-x-x mid worry kid misses goals mind step faking else am vote deal deals risk jobs opinion.",
   },
   {
     type: "2-context",
@@ -474,7 +474,7 @@ export const stimuli = [
     correct:
       "It was given a banana which had a bruise on it and a banana that was perfect.",
     distractor:
-      "x-x-x luck worry dad inning loved hate yeah skiers sir guys fear miss fails anti okay realize.",
+      "x-x-x mid worry kid misses goals mind step faking else am vote deal deals risk jobs opinion.",
   },
   {
     type: "NP",
@@ -483,7 +483,7 @@ export const stimuli = [
     correct:
       "The monkey ate the banana with the bruise much to everyone’s surprise.",
     distractor:
-      "x-x-x gamers troy plan denies yeah seem evade anti sir midfielder republic.",
+      "x-x-x deploy ease gain trends risk hall squads jobs rule governance attorney.",
   },
   {
     type: "VP",
@@ -492,7 +492,7 @@ export const stimuli = [
     correct:
       "The monkey ate the banana with the fork much to everyone’s surprise.",
     distractor:
-      "x-x-x gamers troy plan denies yeah seem evade anti sir midfielder republic.",
+      "x-x-x deploy ease gain trends risk hall squads jobs rule governance attorney.",
   },
   {
     type: "setup",
@@ -501,7 +501,7 @@ export const stimuli = [
     correct:
       "A caretaker was walking along a corridor carrying some nails. He’d been told to repair a door.",
     distractor:
-      "x-x-x outbreaks nice formula agree hate secondly clinical yeah repay. x-x-x jack park link avenue bet whom.",
+      "x-x-x bloodshed nice streets award eyes produces patience lose repay. x-x-x move park link ladder bet ages.",
   },
   {
     type: "1-context",
@@ -510,7 +510,7 @@ export const stimuli = [
     correct:
       "He saw a door which had a large crack in it and a locker which wouldn't shut properly.",
     distractor:
-      "x-x-x mid am whom month cent vs knows foods days mom anti app earl terms daughter bush payments.",
+      "x-x-x lady week dies wants sick card knows foods lots trip sex rule talks spend daughter ages catholic.",
   },
   {
     type: "2-context",
@@ -519,7 +519,7 @@ export const stimuli = [
     correct:
       "He saw a door which had a large crack in it and a door which wouldn't shut properly.",
     distractor:
-      "x-x-x mid am whom month cent vs knows foods days mom anti app earl terms daughter bush payments.",
+      "x-x-x lady week dies wants sick card knows foods lots trip sex rule talks spend daughter ages catholic.",
   },
   {
     type: "NP",
@@ -528,7 +528,7 @@ export const stimuli = [
     correct:
       "The caretaker repaired the door with the crack and then took a tea break.",
     distractor:
-      "x-x-x shortages cervical dad whom yeah know tends yes hate laws sir grew worry.",
+      "x-x-x rescinded infinity sell none want than ought yes mean fact seem ages weird.",
   },
   {
     type: "VP",
@@ -537,7 +537,7 @@ export const stimuli = [
     correct:
       "The caretaker repaired the door with the nails and then took a tea break.",
     distractor:
-      "x-x-x shortages cervical dad whom yeah know tends yes hate laws sir grew worry.",
+      "x-x-x rescinded infinity sell none want than ought yes mean fact seem ages weird.",
   },
   {
     type: "setup",
@@ -546,7 +546,7 @@ export const stimuli = [
     correct:
       "A skinhead was walking along a street carrying a large knife. He was planning to attack a policeman.",
     distractor:
-      "x-x-x nostrils luck anymore worry guy happen patience miss shall kings. x-x-x else bathroom sort nobody gift standings.",
+      "x-x-x brothels lots deserve apply grow option nonsense kill shall kings. x-x-x lot memories am unless want instances.",
   },
   {
     type: "1-context",
@@ -555,7 +555,7 @@ export const stimuli = [
     correct:
       "He eventually saw a policeman who had a large scar on his face and a policewoman wearing spectacles.",
     distractor:
-      "x-x-x republican cat okay resembles laws sale app users gays poor shut send buy pro immunities nations polynomial.",
+      "x-x-x girlfriend wild feel terminals holy lake page users jays kids meet born buy deal enrolment nations observable.",
   },
   {
     type: "2-context",
@@ -564,7 +564,7 @@ export const stimuli = [
     correct:
       "He eventually saw a policeman who had a large scar on his face and a policeman wearing spectacles.",
     distractor:
-      "x-x-x republican cat okay resembles laws sale app users gays poor shut send buy pro immunities nations polynomial.",
+      "x-x-x girlfriend wild feel terminals holy lake page users jays kids meet born buy deal enrolment nations observable.",
   },
   {
     type: "NP",
@@ -573,7 +573,7 @@ export const stimuli = [
     correct:
       "The skinhead suddenly attacked the policeman with the scar and then ran off.",
     distractor:
-      "x-x-x budgeted humanity valuable vote subscribe hate cent owns jobs mean app lord.",
+      "x-x-x imitated grateful provider want comprises date grow owns lots mean sake sold.",
   },
   {
     type: "VP",
@@ -582,7 +582,7 @@ export const stimuli = [
     correct:
       "The skinhead suddenly attacked the policeman with the knife and then ran off.",
     distractor:
-      "x-x-x budgeted humanity valuable vote subscribe hate cent owns jobs mean app lord.",
+      "x-x-x imitated grateful provider want comprises date grow owns lots mean sake sold.",
   },
   {
     type: "setup",
@@ -591,7 +591,7 @@ export const stimuli = [
     correct:
       "A dressmaker was working on a dress using a pair of scissors. She had to cut some material for the pockets.",
     distractor:
-      "x-x-x tolerances hear anymore cent oh likes hands miss fees need infinity. x-x-x lot jack sad yeah studying god sir applies.",
+      "x-x-x defections fear percent buy guy yards teams hurt deny ways inspires. x-x-x lot card lady born tomorrow ask died relates.",
   },
   {
     type: "1-context",
@@ -600,7 +600,7 @@ export const stimuli = [
     correct:
       "She had a piece of material which had a pattern on it and a piece of leather which was plain.",
     distractor:
-      "x-x-x sale oh shall guys agencies knows sir dad offense wish glad lord hill taxes yeah realize worst app email.",
+      "x-x-x fact lake shall cold universe users cash spot embassy boys want jobs rule taxes kids outcome rates buy quest.",
   },
   {
     type: "2-context",
@@ -609,7 +609,7 @@ export const stimuli = [
     correct:
       "She had a piece of material which had a pattern on it and a piece of material which was plain.",
     distractor:
-      "x-x-x sale oh shall guys agencies knows sir dad offense wish glad lord hill taxes yeah realize worst app email.",
+      "x-x-x fact lake shall cold universe users cash spot embassy boys want jobs rule taxes kids outcome rates buy quest.",
   },
   {
     type: "NP",
@@ -618,7 +618,7 @@ export const stimuli = [
     correct:
       "The dressmaker cut the material with the pattern and then went to have lunch.",
     distractor:
-      "x-x-x ecologists mid hear remember glad lord explores yeah okay kids wish plus robin.",
+      "x-x-x locomotion cool ask enjoying sure bet educate town born boys date plus robin.",
   },
   {
     type: "VP",
@@ -627,7 +627,7 @@ export const stimuli = [
     correct:
       "The dressmaker cut the material with the scissors and then went to have lunch.",
     distractor:
-      "x-x-x ecologists mid hear remember glad lord explores yeah okay kids wish plus robin.",
+      "x-x-x locomotion cool ask enjoying sure bet educate town born boys date plus robin.",
   },
   {
     type: "setup",
@@ -636,7 +636,7 @@ export const stimuli = [
     correct:
       "A fireman was running to the scene of a fire carrying a heavy axe. He had to smash down a door.",
     distractor:
-      "x-x-x hamlets ones century oh pre cents soul nor upon reliable yeah rates hubs. x-x-x lot jack olive gift glad sake.",
+      "x-x-x fringes ones nations sell sold frank pain lady info channels yes rates vain. x-x-x sun plus olive term read sake.",
   },
   {
     type: "1-context",
@@ -645,7 +645,7 @@ export const stimuli = [
     correct:
       "When he got to the scene of the fire he found a door which had a very rusty lock and a window which was nailed shut.",
     distractor:
-      "x-x-x hear glad yeah hour exist anti nor whom non smart grow earn goals tax vs knew wills grew mom fund prices rates app syntax gift.",
+      "x-x-x lie till mark week ought non push thus ways smart send ages teams mind card does cites lied drug tax prices rates cash cleric sing.",
   },
   {
     type: "2-context",
@@ -654,7 +654,7 @@ export const stimuli = [
     correct:
       "When he got to the scene of the fire he found a door which had a very rusty lock and a door which was nailed shut.",
     distractor:
-      "x-x-x hear glad yeah hour exist anti nor whom non smart grow earn goals tax vs knew wills grew mom fund prices rates app syntax gift.",
+      "x-x-x lie till mark week ought non push thus ways smart send ages teams mind card does cites lied drug tax prices rates cash cleric sing.",
   },
   {
     type: "NP",
@@ -663,7 +663,7 @@ export const stimuli = [
     correct:
       "The fireman smashed down the door with the rusty lock but smoke overcame him.",
     distractor:
-      "x-x-x oversee missile fund mom glad luck grow tends rely yeah debut dialects sold.",
+      "x-x-x modeled apostle lack send none hope sell align vary week debut concerto girl.",
   },
   {
     type: "VP",
@@ -672,7 +672,7 @@ export const stimuli = [
     correct:
       "The fireman smashed down the door with the heavy axe but smoke overcame him.",
     distractor:
-      "x-x-x oversee missile fund mom glad luck grow tends rely yeah debut dialects sold.",
+      "x-x-x modeled apostle lack send none hope sell align vary week debut concerto girl.",
   },
   {
     type: "setup",
@@ -681,7 +681,7 @@ export const stimuli = [
     correct:
       "A little girl borrowed from the kitchen a bread knife. She wanted to cut an orange into pieces.",
     distractor:
-      "x-x-x prices laws temporal glad miss seconds yeah input guilt. x-x-x stupid sir pre wish assume hear invite.",
+      "x-x-x prices eyes vitamins lack shut updates yes flows tasks. x-x-x stupid cup feet met exists none settle.",
   },
   {
     type: "1-context",
@@ -690,7 +690,7 @@ export const stimuli = [
     correct:
       "She found in the fruit bowl an orange which had a very thick rind and a tangerine which had a thin rind.",
     distractor:
-      "x-x-x worse hill cent faced dean yeah settle goals hate sir whom files gyms ways guys unravel wants lord van harm skew.",
+      "x-x-x worse shut guy hates fate goal senate plans mind job gets argue lire cars wait renovate goals shop plan harm saws.",
   },
   {
     type: "2-context",
@@ -699,7 +699,7 @@ export const stimuli = [
     correct:
       "She found in the fruit bowl an orange which had a very thick rind and an orange which had a thin rind.",
     distractor:
-      "x-x-x worse hill cent faced dean yeah settle goals hate sir whom files gyms ways guys unravel wants lord van harm skew.",
+      "x-x-x worse shut guy hates fate goal senate plans mind job gets argue lire cars wait renovate goals shop plan harm saws.",
   },
   {
     type: "NP",
@@ -708,7 +708,7 @@ export const stimuli = [
     correct:
       "The little girl tried to cut the orange with the thick rind but to no success.",
     distractor:
-      "x-x-x enough send trump lake app sir expect yeah fund voted juror anti vs than nations.",
+      "x-x-x enough shut trump hall upon trip expect hope than acres lien self us till follows.",
   },
   {
     type: "VP",
@@ -717,7 +717,7 @@ export const stimuli = [
     correct:
       "The little girl tried to cut the orange with the bread knife but to no success.",
     distractor:
-      "x-x-x enough send trump lake app sir expect yeah fund voted juror anti vs than nations.",
+      "x-x-x enough shut trump hall upon trip expect hope than acres lien self us till follows.",
   },
   {
     type: "setup",
@@ -726,7 +726,7 @@ export const stimuli = [
     correct:
       "A chemist was adjusting a bunsen burner. He was about to heat up a solution.",
     distractor:
-      "x-x-x agendas holy crossings jack rioted brides. x-x-x dad check rest anti sir same consists.",
+      "x-x-x raiders ones terminate same rioted abuses. x-x-x guy worry sun loud lie non findings.",
   },
   {
     type: "1-context",
@@ -735,7 +735,7 @@ export const stimuli = [
     correct:
       "On his bench there was a solution which had blue crystals in it and a powder containing red dye.",
     distractor:
-      "x-x-x glad ought worse jack cent diseases queen dad pray massacre mom guys pre lord equity creativity bet pier.",
+      "x-x-x ring ought worse cat die diseases lives girl kiss robotics sea hurt gay army granted physicians ride pier.",
   },
   {
     type: "2-context",
@@ -744,7 +744,7 @@ export const stimuli = [
     correct:
       "On his bench there was a solution which had blue crystals in it and a solution containing red dye.",
     distractor:
-      "x-x-x glad ought worse jack cent diseases queen dad pray massacre mom guys pre lord equity creativity bet pier.",
+      "x-x-x ring ought worse cat die diseases lives girl kiss robotics sea hurt gay army granted physicians ride pier.",
   },
   {
     type: "NP",
@@ -753,7 +753,7 @@ export const stimuli = [
     correct:
       "The chemist heated the solution with the blue crystals but the gas went out.",
     distractor:
-      "x-x-x oversee brakes glad becoming soul mom hath forbid wait guys gone yeah luck.",
+      "x-x-x expands brakes gain becoming fear park haunts weddings fun ride mum nice mark.",
   },
   {
     type: "VP",
@@ -762,7 +762,7 @@ export const stimuli = [
     correct:
       "The chemist heated the solution with the bunsen burner but the gas went out.",
     distractor:
-      "x-x-x oversee brakes glad becoming soul mom hath forbid wait guys gone yeah luck.",
+      "x-x-x expands brakes gain becoming fear park haunts weddings fun ride mum nice mark.",
   },
   {
     type: "setup",
@@ -771,7 +771,7 @@ export const stimuli = [
     correct:
       "A drunk was walking along a street wielding an empty bottle. He felt like smashing a window.",
     distractor:
-      "x-x-x loans hear regions agree glad expect funerals cent deals reform. x-x-x miss trip oversees app decide.",
+      "x-x-x loans text anymore learn cup option funerals list deals relate. x-x-x ford trip traverse yes decide.",
   },
   {
     type: "1-context",
@@ -780,7 +780,7 @@ export const stimuli = [
     correct:
       "In front of him he saw a window made of stained glass and a glass door which had bars covering it.",
     distractor:
-      "x-x-x worth hope born jack anti vs afford yeah guys specify aware miss hate decide boys rates vote yoga violence sir.",
+      "x-x-x shall best done rate wild feel abroad self risk emerged plays list gain decide fear worst fun yoga province idea.",
   },
   {
     type: "2-context",
@@ -789,7 +789,7 @@ export const stimuli = [
     correct:
       "In front of him he saw a window made of stained glass and a window which had bars covering it.",
     distractor:
-      "x-x-x worth hope born jack anti vs afford yeah guys specify aware miss hate decide rates vote yoga violence sir.",
+      "x-x-x shall best done rate wild feel abroad self risk emerged plays list gain decide worst fun yoga province idea.",
   },
   {
     type: "NP",
@@ -798,7 +798,7 @@ export const stimuli = [
     correct:
       "The drunk smashed the window with the stained glass and staggered off laughing.",
     distractor:
-      "x-x-x shown abolish know indeed yeah app evolve helps non federally sir airlines.",
+      "x-x-x apart clarify cost indeed sure trip define useful ask linguists rate resource.",
   },
   {
     type: "VP",
@@ -807,7 +807,7 @@ export const stimuli = [
     correct:
       "The drunk smashed the window with the empty bottle and staggered off laughing.",
     distractor:
-      "x-x-x shown abolish know indeed yeah app evolve helps non federally sir airlines.",
+      "x-x-x apart clarify cost indeed sure trip define useful ask linguists rate resource.",
   },
   {
     type: "setup",
@@ -816,7 +816,7 @@ export const stimuli = [
     correct:
       "A vet went into an animal cage carrying a dart gun. He had to tranquilise a lion.",
     distractor:
-      "x-x-x heal jack soul goes method owes priority cent pubs lots. x-x-x else sir merchantmen okay vary.",
+      "x-x-x pots gold took thus method tons teachers rate reap earn. x-x-x door foot echinoderms cup sits.",
   },
   {
     type: "1-context",
@@ -825,7 +825,7 @@ export const stimuli = [
     correct:
       "Inside the cage there was a lion that had a big mane and a puma that didn't have any mane at all.",
     distractor:
-      "x-x-x kill warn worry dad knew aids guys jobs sale app nuns vote cent mono glad budget laws sell alma bus anti.",
+      "x-x-x girl warn guess fan die aids same cash job gets alma holy tax sans poor income rich list plat drug met.",
   },
   {
     type: "2-context",
@@ -834,7 +834,7 @@ export const stimuli = [
     correct:
       "Inside the cage there was a lion that had a big mane and a lion that didn't have any mane at all.",
     distractor:
-      "x-x-x kill warn worry dad knew aids guys jobs sale app nuns vote cent mono glad budget laws sell alma bus anti.",
+      "x-x-x girl warn guess fan die aids same cash job gets alma holy tax sans poor income rich list plat drug met.",
   },
   {
     type: "NP",
@@ -843,7 +843,7 @@ export const stimuli = [
     correct:
       "The vet tranquilised the lion with the big mane and then examined it.",
     distractor:
-      "x-x-x bred minesweeping loss fled same app sued rely pre yeah caffeine cent.",
+      "x-x-x slid minesweeping loss ours same add quo hoc year term premiums gone.",
   },
   {
     type: "VP",
@@ -852,7 +852,7 @@ export const stimuli = [
     correct:
       "The vet tranquilised the lion with the dart gun and then examined it.",
     distractor:
-      "x-x-x bred minesweeping loss fled same app sued rely pre yeah caffeine cent.",
+      "x-x-x slid minesweeping loss ours same add quo hoc year term premiums gone.",
   },
   {
     type: "setup",
@@ -861,7 +861,7 @@ export const stimuli = [
     correct:
       "A tribesman was running through the forest carrying a long spear. He intended to kill a lion.",
     distractor:
-      "x-x-x newscasts luck anymore imagine sir taught wondered oh hear halls. x-x-x feelings guy yeah wish aids.",
+      "x-x-x newscasts cool anymore realize mark belong birthday tell upon evoke. x-x-x precious cup dies door aids.",
   },
   {
     type: "1-context",
@@ -870,7 +870,7 @@ export const stimuli = [
     correct:
       "On arriving at a clearing he found a lion which had very sharp teeth and a tiger which had strange coloured paws.",
     distractor:
-      "x-x-x handbook cent vs resisted hate union bill vary terms mid step codes essay dad app rely ideas mom outcome showcase sunk.",
+      "x-x-x murdered rise done outright fans union add vary costs fun note inter argue wife win anime users step percent showcase guru.",
   },
   {
     type: "2-context",
@@ -879,7 +879,7 @@ export const stimuli = [
     correct:
       "On arriving at a clearing he found a lion which had very sharp teeth and a lion which had strange coloured paws.",
     distractor:
-      "x-x-x handbook cent vs resisted hate union bill vary terms mid step codes essay dad app rely ideas mom outcome showcase sunk.",
+      "x-x-x murdered rise done outright fans union add vary costs fun note inter argue wife win anime users step percent showcase guru.",
   },
   {
     type: "NP",
@@ -888,7 +888,7 @@ export const stimuli = [
     correct:
       "The tribesman killed the lion with the sharp teeth and carried it back home.",
     distractor:
-      "x-x-x preempted stupid gift rely hear else knew forum jobs billion oh sale name.",
+      "x-x-x loanwords stupid door rely step does shall cyber ice finance add term tell.",
   },
   {
     type: "VP",
@@ -897,7 +897,7 @@ export const stimuli = [
     correct:
       "The tribesman killed the lion with the long spear and carried it back home.",
     distractor:
-      "x-x-x preempted stupid gift rely hear else knew forum jobs billion oh sale name.",
+      "x-x-x loanwords stupid door rely step does shall cyber ice finance add term tell.",
   },
   {
     type: "setup",
@@ -906,7 +906,7 @@ export const stimuli = [
     correct:
       "A demolition man was on his way to work in his bulldozer. He’d been told to go to a particular address to demolish a house.",
     distractor:
-      "x-x-x capacities luck cool vs yeah none lose cent hate yes abstained. x-x-x else park link jobs al met enrollment reached pre lowlands sale apply.",
+      "x-x-x capacities cool gold text sun each fat does feel rate overthrew. x-x-x move ring park east link met substances reached feet starship wear calls.",
   },
   {
     type: "1-context",
@@ -915,7 +915,7 @@ export const stimuli = [
     correct:
       "Once at the address he found a house which had an ornate fountain in its garden and a church covered in fine carvings.",
     distractor:
-      "x-x-x dad goes follows glad sweet jack rates agree cent sir relays senators lose knew suffer hate vs happen trouble need miss preclude.",
+      "x-x-x bed uses follows wear brown walk comes super push step comets deployed me goes anyway pain fear except trouble data ford encoding.",
   },
   {
     type: "2-context",
@@ -924,7 +924,7 @@ export const stimuli = [
     correct:
       "Once at the address he found a house which had an ornate fountain in its garden and a house covered in fine carvings.",
     distractor:
-      "x-x-x dad goes follows glad sweet jack rates agree cent sir relays senators lose knew suffer hate vs happen trouble need miss preclude.",
+      "x-x-x bed uses follows wear brown walk comes super push step comets deployed me goes anyway pain fear except trouble data ford encoding.",
   },
   {
     type: "NP",
@@ -933,7 +933,7 @@ export const stimuli = [
     correct:
       "The man demolished the house with the fountain but it wasn't the right one.",
     distractor:
-      "x-x-x seen insurgents draw worry miss yeah undertook sir vs mobile fund shall glad.",
+      "x-x-x yet insulation draw maybe pick via marathons gay deal annual fat heard our.",
   },
   {
     type: "VP",
@@ -942,7 +942,7 @@ export const stimuli = [
     correct:
       "The man demolished the house with the bulldozer but it wasn't the right one.",
     distractor:
-      "x-x-x seen insurgents draw worry miss yeah undertook sir vs mobile fund shall glad.",
+      "x-x-x yet insulation draw maybe pick via marathons gay deal annual fat heard our.",
   },
   {
     type: "setup",
@@ -951,7 +951,7 @@ export const stimuli = [
     correct:
       "A furniture restorer was getting out some paint stripper. He’d been asked to strip a cabinet.",
     distractor:
-      "x-x-x occasions littoral glad anymore hear vote mayor diaspora. x-x-x jack river link spine met arsenal.",
+      "x-x-x reactions misdeeds wild percent did tell eagle diaspora. x-x-x land river link cliff goal centers.",
   },
   {
     type: "1-context",
@@ -960,7 +960,7 @@ export const stimuli = [
     correct:
       "In his workshop there was a cabinet which had brass hinges and a chest which had aluminium hinges.",
     distractor:
-      "x-x-x lose destined super okay jack amounts mouth nice penis embryo bus sir visited worry luck therapist malice.",
+      "x-x-x add demanded worse slow die targets stars baby beast embryo sex why chances wants gay countdown malice.",
   },
   {
     type: "2-context",
@@ -969,7 +969,7 @@ export const stimuli = [
     correct:
       "In his workshop there was a cabinet which had brass hinges and a cabinet which had aluminium hinges.",
     distractor:
-      "x-x-x lose destined super okay jack amounts mouth nice penis embryo bus sir visited worry luck therapist malice.",
+      "x-x-x add demanded worse slow die targets stars baby beast embryo sex why chances wants gay countdown malice.",
   },
   {
     type: "NP",
@@ -978,7 +978,7 @@ export const stimuli = [
     correct:
       "The restorer stripped the cabinet with the brass hinges and then waxed it.",
     distractor:
-      "x-x-x unionism eyebrows yes discuss miss ago grows migrate glad mean epoch yeah.",
+      "x-x-x downwind tolerant own reached tour gets grows infancy pain here nouns meet.",
   },
   {
     type: "VP",
@@ -987,7 +987,7 @@ export const stimuli = [
     correct:
       "The restorer stripped the cabinet with the paint stripper and then waxed it.",
     distractor:
-      "x-x-x unionism eyebrows yes discuss miss ago grows migrate glad mean epoch yeah.",
+      "x-x-x downwind tolerant own reached tour gets grows infancy pain here nouns meet.",
   },
   {
     type: "setup",
@@ -996,7 +996,7 @@ export const stimuli = [
     correct:
       "A doctor walked into a waiting room carrying a stethoscope. He’d arranged to examine a woman patient.",
     distractor:
-      "x-x-x prices racism fund cent reasons rise memories yeah enrollments. x-x-x gameplay jack coupled glad rates revenue.",
+      "x-x-x prices purple goal met anymore save missions die refinements. x-x-x gameplay spot bonuses shut users streets.",
   },
   {
     type: "1-context",
@@ -1005,7 +1005,7 @@ export const stimuli = [
     correct:
       "In the waiting room there was a woman who had a temperature and a man who seemed to have stomach pains.",
     distractor:
-      "x-x-x glad anymore born weird pop cent lives pre mid vs researchers boys app owner laws budget sale anti android guild.",
+      "x-x-x pick noticed gone weird pop took lives our sun band researchers fans why teams self option tour cell android abbot.",
   },
   {
     type: "2-context",
@@ -1014,7 +1014,7 @@ export const stimuli = [
     correct:
       "In the waiting room there was a woman who had a temperature and a woman who seemed to have stomach pains.",
     distractor:
-      "x-x-x glad anymore born weird pop cent lives pre mid vs researchers boys app owner laws budget sale anti android guild.",
+      "x-x-x pick noticed gone weird pop took lives our sun band researchers fans why teams self option tour cell android abbot.",
   },
   {
     type: "NP",
@@ -1023,7 +1023,7 @@ export const stimuli = [
     correct:
       "The doctor examined the woman with the temperature but couldn't help her.",
     distractor:
-      "x-x-x toward carnival sir shall hate app metamorphic pre republic hill sale.",
+      "x-x-x afford feminism ride knows push does enthusiasts easy yourself east sold.",
   },
   {
     type: "VP",
@@ -1032,7 +1032,7 @@ export const stimuli = [
     correct:
       "The doctor examined the woman with the stethoscope but couldn't help her.",
     distractor:
-      "x-x-x toward carnival sir shall hate app metamorphic pre republic hill sale.",
+      "x-x-x afford feminism ride knows push does enthusiasts easy yourself east sold.",
   },
   {
     type: "setup",
@@ -1041,7 +1041,7 @@ export const stimuli = [
     correct:
       "A secretary was sitting at her desk on which was a manual typewriter. She was told to type up a report.",
     distractor:
-      "x-x-x decisions pre depends app grow earn laws worse gain yeah trends complicate. x-x-x else cent mind anti wish miss expect.",
+      "x-x-x democrats loss dollars idea fat rays wild doubt rule rise trends tragically. x-x-x sick ride base inch gets seen expect.",
   },
   {
     type: "1-context",
@@ -1050,7 +1050,7 @@ export const stimuli = [
     correct:
       "She was handed a report covered in diagrams and a letter written in different colours.",
     distractor:
-      "x-x-x mid thesis lie except eastern beat persists lord yeah unless schools keep wonderful quietly.",
+      "x-x-x boy brooks lie beyond eastern saw persists foot sick expect nations feel seriously quietly.",
   },
   {
     type: "2-context",
@@ -1059,7 +1059,7 @@ export const stimuli = [
     correct:
       "She was handed a report covered in diagrams and a report written in different colours.",
     distractor:
-      "x-x-x mid thesis lie except eastern beat persists lord yeah unless schools keep wonderful quietly.",
+      "x-x-x boy brooks lie beyond eastern saw persists foot sick expect nations feel seriously quietly.",
   },
   {
     type: "NP",
@@ -1068,7 +1068,7 @@ export const stimuli = [
     correct:
       "The secretary typed up the report with the diagrams and then went to lunch.",
     distractor:
-      "x-x-x recommend bison sir eat happen luck grow worshipped hate yeah hill plan teeth.",
+      "x-x-x recommend spicy feet ring happen wear goes worshipped sea east pain may trans.",
   },
   {
     type: "VP",
@@ -1077,7 +1077,7 @@ export const stimuli = [
     correct:
       "The secretary typed up the report with the typewriter and then went to lunch.",
     distractor:
-      "x-x-x recommend bison sir eat happen luck grow worshipped hate yeah hill plan teeth.",
+      "x-x-x recommend spicy feet ring happen wear goes worshipped sea east pain may trans.",
   },
   {
     type: "setup",
@@ -1086,7 +1086,7 @@ export const stimuli = [
     correct:
       "A burglar was trying to break into a house and had a credit card in his hand. He wanted to open a door.",
     distractor:
-      "x-x-x ballots pre senate cup notes yeah met rates yes app sir abroad eggs am guys goes. x-x-x happen cent else glad okay.",
+      "x-x-x batters join videos goal types rose died terms male firm size writes suck wind skin thus. x-x-x happen foot upon lie tend.",
   },
   {
     type: "1-context",
@@ -1095,7 +1095,7 @@ export const stimuli = [
     correct:
       "He found a door which had a faulty lock and a window which had a cracked frame.",
     distractor:
-      "x-x-x weird oh onto lives jack vs assert earn wild yeah whom worst pre cent propose finds.",
+      "x-x-x queen draw onto stars fat dog assert tons poor boys movies weird gay race propose gifts.",
   },
   {
     type: "2-context",
@@ -1104,7 +1104,7 @@ export const stimuli = [
     correct:
       "He found a door which had a faulty lock and a door which had a cracked frame.",
     distractor:
-      "x-x-x weird oh onto lives jack vs assert earn wild yeah whom worst pre cent propose finds.",
+      "x-x-x queen draw onto stars fat dog assert tons poor boys movies weird gay race propose gifts.",
   },
   {
     type: "NP",
@@ -1113,7 +1113,7 @@ export const stimuli = [
     correct:
       "The burglar opened the door with the faulty lock and quickly slipped inside.",
     distractor:
-      "x-x-x tariffs senate cent glad lose seem capita tend pre anymore honesty amount.",
+      "x-x-x expands silver drop thus male site relies tend sea affairs honesty degree.",
   },
   {
     type: "VP",
@@ -1122,7 +1122,7 @@ export const stimuli = [
     correct:
       "The burglar opened the door with the credit card and quickly slipped inside.",
     distractor:
-      "x-x-x tariffs senate cent glad lose seem capita tend pre anymore honesty amount.",
+      "x-x-x expands silver drop thus male site relies tend sea affairs honesty degree.",
   },
   {
     type: "setup",
@@ -1131,7 +1131,7 @@ export const stimuli = [
     correct:
       "A cleaning lady started on her morning rounds carrying a brush. She would have to clean a corridor that morning.",
     distractor:
-      "x-x-x outcomes glad awesome app guys nations belong survival seem abbey. x-x-x funny anti dad roman sir commence lady website.",
+      "x-x-x outcomes pray awesome rose rise require theirs governor need irony. x-x-x thing wall boy weird idea exploits boys website.",
   },
   {
     type: "1-context",
@@ -1140,7 +1140,7 @@ export const stimuli = [
     correct:
       "In the building there was a corridor which had lots of plants along it and a lounge which had lots of pictures on the walls.",
     distractor:
-      "x-x-x lose somebody weird skin sir funniest enjoy fat item die invite judge ask vote dad conclude hands okay cent sure discover wife guys sorts.",
+      "x-x-x able somebody queen skin us stitches lives cat kiss case galaxy basis try note win educate trump boy hero true universe son won loves.",
   },
   {
     type: "2-context",
@@ -1149,7 +1149,7 @@ export const stimuli = [
     correct:
       "In the building there was a corridor which had lots of plants along it and a corridor which had lots of pictures on the walls.",
     distractor:
-      "x-x-x lose somebody weird skin sir funniest enjoy fat item die invite judge ask vote dad conclude hands okay cent sure discover wife guys sorts.",
+      "x-x-x able somebody queen skin us stitches lives cat kiss case galaxy basis try note win educate trump boy hero true universe son won loves.",
   },
   {
     type: "NP",
@@ -1158,7 +1158,7 @@ export const stimuli = [
     correct:
       "The cleaning lady cleaned the corridor with the plants and then lit a cigarette.",
     distractor:
-      "x-x-x moreover glad factual dad prompted hate know ought sir cent coup bet implement.",
+      "x-x-x moreover pray trustee call prompted join came galaxy camp plan euro age proposing.",
   },
   {
     type: "VP",
@@ -1167,7 +1167,7 @@ export const stimuli = [
     correct:
       "The cleaning lady cleaned the corridor with the brush and then lit a cigarette.",
     distractor:
-      "x-x-x moreover glad factual dad prompted hate know ought sir cent coup bet implement.",
+      "x-x-x moreover pray trustee call prompted join came galaxy camp plan euro age proposing.",
   },
   {
     type: "setup",
@@ -1176,7 +1176,7 @@ export const stimuli = [
     correct:
       "A woman was looking through some clothes while holding some darning wool. She needed to repair a sock.",
     distractor:
-      "x-x-x rates pre anymore century miss deserve march edition cent enrolls beta. x-x-x happen oh bureau sir bids.",
+      "x-x-x costs heat account message gone colonel march edition need basemen ours. x-x-x stupid kill bureau read pros.",
   },
   {
     type: "1-context",
@@ -1185,7 +1185,7 @@ export const stimuli = [
     correct:
       "She found in the pile of clothes a sock which had a hole in it and a jumper which was getting a bit thin.",
     distractor:
-      "x-x-x trump vs cent unto dad anymore miss tabs costs pre pro wars boys sir guys app elites coast hate website tour nor dean.",
+      "x-x-x worse unit kill eats pull outcome try tabs basis west camp vary love drug note tax breeds coast tour weekend site via maps.",
   },
   {
     type: "2-context",
@@ -1194,7 +1194,7 @@ export const stimuli = [
     correct:
       "She found in the pile of clothes a sock which had a hole in it and a sock which was getting a bit thin.",
     distractor:
-      "x-x-x trump vs cent unto dad anymore miss tabs costs pre pro wars boys sir guys app elites coast hate website tour nor dean.",
+      "x-x-x worse unit kill eats pull outcome try tabs basis west camp vary love drug note tax breeds coast tour weekend site via maps.",
   },
   {
     type: "NP",
@@ -1203,7 +1203,7 @@ export const stimuli = [
     correct:
       "The woman repaired the sock with the hole but hurt her finger in the process.",
     distractor:
-      "x-x-x apart farmland glad fide jobs fund wars pre pope seem ignore al know follows.",
+      "x-x-x apart motorway try vivo easy west amid meet pope tour exists fun ran follows.",
   },
   {
     type: "VP",
@@ -1212,7 +1212,7 @@ export const stimuli = [
     correct:
       "The woman repaired the sock with the wool but hurt her finger in the process.",
     distractor:
-      "x-x-x apart farmland glad fide jobs fund wars pre pope seem ignore al know follows.",
+      "x-x-x apart motorway try vivo easy west amid meet pope tour exists fun ran follows.",
   },
   {
     type: "setup",
@@ -1221,7 +1221,7 @@ export const stimuli = [
     correct:
       "A little boy was playing in a garden kicking a ball about. He was warned that he’d probably break a window.",
     distractor:
-      "x-x-x videos laws pre reasons grow app exists bishops link tips doubt. x-x-x miss outlet cent sits download table park awards.",
+      "x-x-x videos rid loss reasons plan done assets thrones lost maps truth. x-x-x seat temper spot cape republic doors site voices.",
   },
   {
     type: "1-context",
@@ -1230,7 +1230,7 @@ export const stimuli = [
     correct:
       "Close to him was a window which had a crack in it and a statue that looked very old.",
     distractor:
-      "x-x-x mid lady jack nor phones wants hate vs exams lots app wait sir awards wish income card mom.",
+      "x-x-x huge cast slow pull phones lives ice job firms cars find sex law behalf wife notice song pay.",
   },
   {
     type: "2-context",
@@ -1239,7 +1239,7 @@ export const stimuli = [
     correct:
       "Close to him was a window which had a crack in it and a window that looked very old.",
     distractor:
-      "x-x-x mid lady jack nor phones wants hate vs exams lots app wait sir awards wish income card mom.",
+      "x-x-x huge cast slow pull phones lives ice job firms cars find sex law behalf wife notice song pay.",
   },
   {
     type: "NP",
@@ -1248,7 +1248,7 @@ export const stimuli = [
     correct:
       "The boy did accidentally break the window with the crack and ran home crying.",
     distractor:
-      "x-x-x fail mid technologies miles glad prefer hope fund occur jobs dean lack surely.",
+      "x-x-x gone huge significance miles did behalf join role occur sex wars size decade.",
   },
   {
     type: "VP",
@@ -1257,7 +1257,7 @@ export const stimuli = [
     correct:
       "The boy did accidentally break the window with the ball and ran home crying.",
     distractor:
-      "x-x-x fail mid technologies miles glad prefer hope fund occur jobs dean lack surely.",
+      "x-x-x gone huge significance miles did behalf join role occur sex wars size decade.",
   },
   {
     type: "setup",
@@ -1266,7 +1266,7 @@ export const stimuli = [
     correct:
       "A chef was working in his kitchen by a food mixer. He was preparing to make a cake.",
     distractor:
-      "x-x-x tops yes percent link miss happens okay hate seem havoc. x-x-x else magazines yeah anti ago fees.",
+      "x-x-x nets loss dollars say ran applies why won held equip. x-x-x spot nightmare wall skin boy fees.",
   },
   {
     type: "1-context",
@@ -1275,7 +1275,7 @@ export const stimuli = [
     correct:
       "Somebody came into the kitchen and asked him to bake a cake containing dried fruit and a pie topped with jam.",
     distractor:
-      "x-x-x fund mark ones pleased non basis app cent dice miss ages disability audit valid self yeah aims impose vote hack.",
+      "x-x-x wall took kept reached son basis rose size null win cops conclusion audit tweet role west rely impose sort est.",
   },
   {
     type: "2-context",
@@ -1284,7 +1284,7 @@ export const stimuli = [
     correct:
       "Somebody came into the kitchen and asked him to bake a cake containing dried fruit and a cake topped with jam.",
     distractor:
-      "x-x-x fund mark ones pleased non basis app cent dice miss ages disability audit valid self yeah aims impose vote hack.",
+      "x-x-x wall took kept reached son basis rose size null win cops conclusion audit tweet role west rely impose sort est.",
   },
   {
     type: "NP",
@@ -1293,7 +1293,7 @@ export const stimuli = [
     correct:
       "The chef started to make the cake with the dried fruit but ran out of eggs.",
     distractor:
-      "x-x-x outs seconds yes else sir owns died knew deny plead hate dean fund yeah semi.",
+      "x-x-x spam dollars sign cell west ours role ran peer wards war inch give tell grew.",
   },
   {
     type: "VP",
@@ -1302,7 +1302,7 @@ export const stimuli = [
     correct:
       "The chef started to make the cake with the food mixer but ran out of eggs.",
     distractor:
-      "x-x-x outs seconds yes else sir owns died knew deny plead hate dean fund yeah semi.",
+      "x-x-x spam dollars sign cell west ours role ran peer wards war inch give tell grew.",
   },
   {
     type: "setup",
@@ -1311,7 +1311,7 @@ export const stimuli = [
     correct:
       "A gardener was working in a garden adjusting a chainsaw. He needed to cut down a tree.",
     distractor:
-      "x-x-x offences anti message jack vs voters nationals hate enamored. x-x-x happen dad pre glad yeah info.",
+      "x-x-x contexts gold explain pick fans sounds attendees won surnames. x-x-x moment fell cell wife try sake.",
   },
   {
     type: "1-context",
@@ -1320,7 +1320,7 @@ export const stimuli = [
     correct:
       "He was standing by a tree covered in greenfly and a tall shrub which had been dead a long time.",
     distractor:
-      "x-x-x mid download join ago okay realize hour isometry pro app info soaps agree yeah step card buy feel guys.",
+      "x-x-x wall networks come felt adds realize need isometry easy us fees warms aware win race earn pull uses cars.",
   },
   {
     type: "2-context",
@@ -1329,7 +1329,7 @@ export const stimuli = [
     correct:
       "He was standing by a tree covered in greenfly and a tree which had been dead a long time.",
     distractor:
-      "x-x-x mid download join ago okay realize hour isometry pro app info agree yeah step card buy feel guys.",
+      "x-x-x wall networks come felt adds realize need isometry easy us fees aware win race earn pull uses cars.",
   },
   {
     type: "NP",
@@ -1338,7 +1338,7 @@ export const stimuli = [
     correct:
       "The gardener cut down the tree with the greenfly but was very sad about it.",
     distractor:
-      "x-x-x collided loss yeah sir whom glad hear interwar pre app fund fees award vote.",
+      "x-x-x authored gold pick read asks draw role concedes our star news belt click seat.",
   },
   {
     type: "VP",
@@ -1347,7 +1347,7 @@ export const stimuli = [
     correct:
       "The gardener cut down the tree with the chainsaw but was very sad about it.",
     distractor:
-      "x-x-x collided loss yeah sir whom glad hear interwar pre app fund fees award vote.",
+      "x-x-x authored gold pick read asks draw role concedes our star news belt click seat.",
   },
   {
     type: "setup",
@@ -1356,7 +1356,7 @@ export const stimuli = [
     correct:
       "A detective was sitting at a window holding a set of binoculars. He’d been asked to watch a woman.",
     distractor:
-      "x-x-x expertise luck reflect idea glad reduce nations grow ago sir immunology. x-x-x else river link brain miss goals.",
+      "x-x-x reactions wind billion ice went causes require came led them grandchild. x-x-x body coast heat brain foot aware.",
   },
   {
     type: "1-context",
@@ -1365,7 +1365,7 @@ export const stimuli = [
     correct:
       "In the room he was looking into there was a woman holding a revolver and a man holding a grenade.",
     distractor:
-      "x-x-x lose whom dad cent million fund month anti vs rates billion ago metadata guys pre ways airport term malaria.",
+      "x-x-x kept gave slow true million park march bus cell apart factors site insiders wind cost costs airport year honours.",
   },
   {
     type: "2-context",
@@ -1374,7 +1374,7 @@ export const stimuli = [
     correct:
       "In the room he was looking into there was a woman holding a revolver and a woman holding a grenade.",
     distractor:
-      "x-x-x lose whom dad cent million fund month anti vs rates billion ago metadata guys pre ways airport term malaria.",
+      "x-x-x kept gave slow true million park march bus cell apart factors site insiders wind cost costs airport year honours.",
   },
   {
     type: "NP",
@@ -1383,7 +1383,7 @@ export const stimuli = [
     correct:
       "The detective watched the woman with the revolver and then made a phone call.",
     distractor:
-      "x-x-x preparing poverty jack shall anti fund persists pre term laws yeah seems wood.",
+      "x-x-x preparing poverty heat meant wood year reelection poor firm size cost wants land.",
   },
   {
     type: "VP",
@@ -1392,7 +1392,7 @@ export const stimuli = [
     correct:
       "The detective watched the woman with the binoculars and then made a phone call.",
     distractor:
-      "x-x-x preparing poverty jack shall anti fund persists pre term laws yeah seems wood.",
+      "x-x-x preparing poverty heat meant wood year reelection poor firm size cost wants land.",
   },
   {
     type: "setup",
@@ -1401,7 +1401,7 @@ export const stimuli = [
     correct:
       "A man was decorating a room and had with him a large brush. He’d decided to paint a door.",
     distractor:
-      "x-x-x hear ones bestseller win yeah push laws cent app pre ahead winds. x-x-x feeling jack tales fund whom.",
+      "x-x-x rest ice regulators pull runs slow code race case road along sells. x-x-x holiday bus chips walk hire.",
   },
   {
     type: "1-context",
@@ -1410,7 +1410,7 @@ export const stimuli = [
     correct:
       "In the room there was a door which had a large crack in it and a window which wouldn't close.",
     distractor:
-      "x-x-x lose pick weird dad knew whom lives cent sir shall kings hate god wild app agency agree economic queen.",
+      "x-x-x able gave proud son took asks terms job dog knows kings days talk drug army agency peace election aware.",
   },
   {
     type: "2-context",
@@ -1419,7 +1419,7 @@ export const stimuli = [
     correct:
       "In the room there was a door which had a large crack in it and a door which wouldn't close.",
     distractor:
-      "x-x-x lose pick weird dad knew whom lives cent sir shall kings hate god wild app agency agree economic queen.",
+      "x-x-x able gave proud son took asks terms job dog knows kings days talk drug army agency peace election aware.",
   },
   {
     type: "NP",
@@ -1428,7 +1428,7 @@ export const stimuli = [
     correct:
       "The man decided to paint the door with the large crack and do the window later.",
     distractor:
-      "x-x-x upon weekend jack edges app suck yeah knew shall hoped luck vs lady headed peace.",
+      "x-x-x seen weekend tree firms bit suck fair may alone forth walk code won ranked union.",
   },
   {
     type: "VP",
@@ -1437,6 +1437,6 @@ export const stimuli = [
     correct:
       "The man decided to paint the door with the large brush and do the window later.",
     distractor:
-      "x-x-x upon weekend jack edges app suck yeah knew shall hoped luck vs lady headed peace.",
+      "x-x-x seen weekend tree firms bit suck fair may alone forth walk code won ranked union.",
   },
 ];

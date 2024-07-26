@@ -76,29 +76,31 @@ export function subset(items, total) {
   shuffle(subset);
   let stims = [];
   for (let i = 0; i < subset.length; i++) {
+    let mini_stims = [];
     let item = items.find((e) => (e.type == "setup") & (e.item == subset[i]));
-    stims.push(item);
+    mini_stims.push(item);
     if (vp_1.includes(subset[i])) {
       item = items.find((e) => (e.type == "1-context") & (e.item == subset[i]));
-      stims.push(item);
+      mini_stims.push(item);
       item = items.find((e) => (e.type == "VP") & (e.item == subset[i]));
-      stims.push(item);
+      mini_stims.push(item);
     } else if (vp_2.includes(subset[i])) {
       item = items.find((e) => (e.type == "2-context") & (e.item == subset[i]));
-      stims.push(item);
+      mini_stims.push(item);
       item = items.find((e) => (e.type == "VP") & (e.item == subset[i]));
-      stims.push(item);
+      mini_stims.push(item);
     } else if (np_1.includes(subset[i])) {
       item = items.find((e) => (e.type == "1-context") & (e.item == subset[i]));
-      stims.push(item);
+      mini_stims.push(item);
       item = items.find((e) => (e.type == "NP") & (e.item == subset[i]));
-      stims.push(item);
+      mini_stims.push(item);
     } else if (np_2.includes(subset[i])) {
       item = items.find((e) => (e.type == "2-context") & (e.item == subset[i]));
-      stims.push(item);
+      mini_stims.push(item);
       item = items.find((e) => (e.type == "NP") & (e.item == subset[i]));
-      stims.push(item);
+      mini_stims.push(item);
     }
+    stims.push(mini_stims);
   }
   console.log(stims);
   return stims;

@@ -10,27 +10,38 @@ export const CONSENT =
 
 export const INSTRUCTIONS =
   "<h3>Please read these instructions carefully!</h3> </br>" +
-  '<div id="intro"> <p>In this task, you will see a <b>transcript of a conversation</b> some previous participants had ' +
-  "where a <b>speaker identified one of the images to some listeners</b>.</p>" +
-  '</br><center><img width="600px" src="assets/demo.png" /></center></br>' +
-  "<p>Your goal is to <b>read the transcript</b> and <b>figure out which image</b> is being described! </p>" +
-  "<p>You will <b>click the image</b> you think is being described, and then you will <b>find out if you were right</b>.<p>" +
-  "<p>You will see <b>64 trials</b>. The image choices will stay the same, but the transcripts " +
-  "will come from different groups of people. " +
-  "Some of the transcripts may be much shorter or longer than others. " +
-  "Some of the descriptions may be hard to understand -- just take a guess if you are not sure.</p>" +
-  "<p>You will get a bonus of <b>5 cents</b> for each image you get right! </p>" +
-  "<p> <b>Note:</b> These descriptions came from real people and may contain inappropriate or " +
-  "offensive language. If you find a description inappropriate, please let us know via Prolific " +
-  "message or in the exit survey, so we can filter it out in the future.</p>";
-('<p>Click "Continue" to start the experiment.</p></div>');
+  "<p>For this experiment, please place your <b>left index finger on the 'e' key</b> and" +
+  " your <b>right index finger on the 'i' key</b>.</p>" +
+  "<p> You will read sentences word by word. " +
+  "On each screen you will see two options: one will be the next word in the sentence, and one will not. </p>" +
+  "<p><b>Select the word that continues the sentence by pressing 'e' (left-hand) for the word on the left or " +
+  "pressing 'i' (right-hand) for the word on the right.</b></p>" +
+  "<p>Select the best word as quickly as you can, but without making too many errors. </p>" +
+  '<div><p>Click "Continue" to try this on a practice sentence.</p></div>';
+
+export const INSTRUCTIONS2 =
+  "<h3>Please read these instructions carefully!</h3> </br>" +
+  "<p>Great job! Now you are ready for the main experiment.</p>" +
+  "<p> You will now read 16 short stories in the same word-by-word way.</p>" +
+  '<div><p>Click "Continue" to start the experiment.</p>';
+
 export const POST_SURVEY_TEXT =
   "<h1>End of the experiment.</h1>" +
   "Before you go, we have a couple questions about your experience.</br>" +
-  "We plan to run more similar experiments in the future, so your " +
-  "thoughtful responses here will help us make the experience smoother.";
+  "Your " +
+  "thoughtful responses here will help us make our future experiments better.";
 
 export const POST_SURVEY_QS = [
+  {
+    prompt: "What did you think this experiment was about?",
+    name: "what-about",
+    rows: 4,
+  },
+  {
+    prompt: "Did you notice anything strange about the stories you read?",
+    name: "strange",
+    rows: 4,
+  },
   {
     prompt:
       "Were the instructions and task clear? " +
@@ -41,8 +52,7 @@ export const POST_SURVEY_QS = [
   {
     prompt:
       "How was the task length? Would you have " +
-      "preferred fewer or more items / a shorter or longer task? " +
-      "(Assume time estimate and payment scale with length). ",
+      "preferred a shorter or longer task? ",
     name: "length",
     rows: 4,
   },
@@ -51,19 +61,9 @@ export const POST_SURVEY_QS = [
     name: "errors",
     rows: 4,
   },
-  {
-    prompt:
-      "Is there anything that would make the interface better?" +
-      " (ex. bigger text, or a different placement of text and buttons)",
-    name: "interface",
-    rows: 4,
-  },
   { prompt: "Any other comments?", name: "other", rows: 4 },
 ];
 export const DEBRIEF =
   "<h2>Many thanks for participating!</h2>" +
-  "<p>We are generally interested in how people form conventions, such as " +
-  "shared 'nicknames' for images. Here, we are studying when these " +
-  "shared 'nicknames' are understandable to people who were not part of " +
-  "the group that created the nickname.</p>" +
+  "<p>We are interested in how people integrate the words they read into the context of the sentence so far." +
   "<h1>Press continue to be redirected to Prolific. </h1>";

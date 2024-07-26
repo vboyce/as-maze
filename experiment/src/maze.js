@@ -25,6 +25,12 @@ const info = {
       default: undefined,
       description: "The string to be displayed in Maze style",
     },
+    prompt: {
+      type: ParameterType.STRING,
+      pretty_name: "Prompt",
+      default: undefined,
+      description: "html for the top",
+    },
     order: {
       // I guess you can care about left/right presentation order
       type: ParameterType.ARRAY, // let's hope this works!
@@ -54,13 +60,13 @@ const info = {
     error_message: {
       type: ParameterType.STRING,
       pretty_name: "Error message",
-      default: '<p style="color:red;font-size:40px;"> Wrong!</p>',
+      default: '<p style="color:red;"> Wrong!</p>',
       description: "What to display on mistakes during delay",
     },
     redo_message: {
       type: ParameterType.STRING,
       pretty_name: "Redo message",
-      default: '<p style="color:blue;font-size:40px;"> Try again.</p>',
+      default: '<p style="color:blue;"> Try again.</p>',
       description: "What to display post mistake once keypresses will record",
     },
     trial_duration: {
@@ -109,14 +115,14 @@ const info = {
     font_size: {
       type: ParameterType.INT,
       pretty_name: "The size of the font.",
-      default: 36,
+      default: 60,
       description:
         "The final font will be computed from the family, and font size",
     },
     width: {
       type: ParameterType.INT,
       pretty_name: "width",
-      default: 600,
+      default: 1000,
       description:
         "The width of the canvas in which the spr moving window is presented.",
     },
@@ -212,7 +218,9 @@ function setupVariables(display_element, trial_pars) {
 
   //set up display
   // var new_html =
-  //   '<div id="jspsych-maze-stimulus">' + trial_pars.normal_message + "</div>";
+  //   '<div id="jspsych-maze-stimulus">' + trial_pars.normal_message + "</div>"
+  var new_html = "<div id='status'>" + trial_pars.prompt + "</div>";
+  display_element.innerHTML = new_html;
   createCanvas(display_element, trial_pars);
   let div = createTextArea(display_element);
   div.innerHTML = normal_message;
@@ -254,7 +262,7 @@ function createTextArea(display_element) {
   div.style.display = "flex";
   div.style.justifyContent = "center";
   div.style.alignContent = "center";
-  div.id = "myDiv";
+  div.id = "feedback";
   return div;
 }
 /**
@@ -360,7 +368,7 @@ class MazePlugin {
         if (group_index >= order.length) {
           end_trial();
         } else {
-          let div = document.getElementById("myDiv");
+          let div = document.getElementById("feedback");
           div.innerHTML = normal_message;
           installResponse();
           drawStimulus(trial_pars, group_index);
@@ -379,7 +387,7 @@ class MazePlugin {
         } else {
           //do delay, then redo
           cumulative_rt += delay;
-          let div = document.getElementById("myDiv");
+          let div = document.getElementById("feedback");
           div.innerHTML = error_message;
           this.jsPsych.pluginAPI.setTimeout(handleMistake, delay);
         }
@@ -387,7 +395,7 @@ class MazePlugin {
     };
 
     const handleMistake = () => {
-      let div = document.getElementById("myDiv");
+      let div = document.getElementById("feedback");
       div.innerHTML = redo_message;
       installResponse();
     };
