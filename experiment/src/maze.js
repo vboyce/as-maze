@@ -197,6 +197,9 @@ function setupVariables(display_element, trial_pars) {
   distractor_words = [];
   order = [];
   ctx = null;
+  cumulative_rts = [];
+  cumulative_rt = 0;
+  responses = [];
 
   //copy a lot of trial pars
   font = `${trial_pars.font_size}px ${trial_pars.font_family}`;
@@ -292,7 +295,6 @@ function drawStimulus(trial_pars, group_index) {
   ctx.fillStyle = font_color;
   let correct_word = correct_words[group_index];
   let distractor_word = distractor_words[group_index];
-  console.log(correct_word);
   correct_word.drawText();
   distractor_word.drawText();
 }
@@ -334,7 +336,6 @@ class MazePlugin {
     };
 
     const afterResponse = (info) => {
-      console.log("afterResponse");
       function mapKey(letter) {
         if (left_keys.includes(letter)) {
           return 0;
@@ -358,7 +359,6 @@ class MazePlugin {
       cumulative_rt += info.rt;
 
       if (order[group_index] == selection) {
-        console.log("correct");
         //correct selection
         //reset things to move onto next word
         cumulative_rts.push(cumulative_rt);
@@ -408,6 +408,13 @@ class MazePlugin {
       this.jsPsych.pluginAPI.clearAllTimeouts();
       this.jsPsych.pluginAPI.cancelAllKeyboardResponses();
       gelement.innerHTML = old_html;
+      trial_data.rt = reactiontimes;
+      trial_data.cumrt = cumulative_rts;
+      trial_data.correct = responses;
+      trial_data.words = correct_words.map((a) => a.text);
+      trial_data.distractors = distractor_words.map((a) => a.text);
+      trial_data.order = order;
+      console.log(trial_data);
       this.jsPsych.finishTrial(trial_data);
     };
   }
