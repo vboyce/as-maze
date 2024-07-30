@@ -1,0 +1,126 @@
+---
+title: "Pilot Analysis"
+output:
+  html_document:
+    toc: true
+    df_print: paged
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = F, message = F)
+knitr::opts_chunk$set(dev = "png", dev.args = list(type = "cairo-png"))
+options(knitr.table.format = "html")
+knitr::opts_chunk$set(echo = F)
+library(tidyverse)
+library(viridis)
+library(Replicate)
+library(metafor)
+library(esc)
+library(here)
+library(brms)
+library(rstan)
+library(googledrive)
+library(glmnet)
+library(tidybayes)
+library(ggstance)
+library("lattice")
+library(reshape2)
+library(ggrepel)
+library(ggthemes)
+library(knitr)
+library(cowplot)
+library(jsonlite)
+rstan_options(auto_write = TRUE)
+options(mc.cores = parallel::detectCores())
+
+theme_set(theme_bw())
+
+dat_loc <- "data/as_maze_pilot_a-trials.csv"
+```
+
+```{r}
+raw <- read_csv(here(dat_loc)) |>
+  select(-proliferate.condition)
+
+
+
+
+free_response <- raw |>
+  filter(is.na(correct)) |>
+  filter(!is.na(response)) |>
+  filter(is.na(stimulus)) |>
+  select(workerid, response, rt)
+
+good_stuff <- raw |>
+  filter(!workerid %in% c("934", "935")) |>
+  filter(!is.na(correct)) |>
+  select(
+    workerid, correct, cumrt, distractors, order, rt, trial_index, words
+  ) |>
+  mutate(workerid = as.factor(workerid)) |>
+  group_by(workerid, trial_index) |>
+  mutate(across(everything(), ~ str_replace_all(.x, "\\['", '\\["'))) |>
+  mutate(across(everything(), ~ str_replace_all(.x, "',", '",'))) |>
+  mutate(across(everything(), ~ str_replace_all(.x, " '", ' "'))) |>
+  mutate(across(everything(), ~ str_replace_all(.x, "'\\]", '"\\]'))) |>
+  mutate(correct = map(correct, fromJSON)) |>
+  mutate(cumrt = map(cumrt, fromJSON)) |>
+  mutate(distractors = map(distractors, fromJSON)) |>
+  mutate(order = map(order, fromJSON)) |>
+  mutate(rt = map(rt, fromJSON)) |>
+  mutate(words = map(words, fromJSON)) |>
+  unnest_longer(c("correct", "cumrt", "words", "distractors", "order", "rt"))
+
+sentences <- good_stuff |>
+  select(words, workerid, trial_index) |>
+  ungroup() |>
+  group_by(workerid, trial_index) |>
+  summarize(sentence = str_c(words, collapse = " ", sep = ""))
+
+post_maze <- read_delim(here("materials/post_maze.txt"), col_names = c("type", "number", "sentence", "blah", "blahblah"), ";") |> select(-blah, -blahblah)
+critical <- read_delim(here("materials/labelled.txt"), ";", col_names = c("type", "number", "critical")) |> select(-X4)
+
+with_labels <- good_stuff |>
+  left_join(sentences) |>
+  left_join(post_maze) |>
+  separate(number, c("number", "subpart")) |> 
+    mutate(number=as.numeric(number)) |> 
+  left_join(critical) |> 
+  filter(!is.na(type))
+
+context_condition <- with_labels |> select(workerid, type, number) |> unique() |> filter(type %in% c("1-context", "2-context")) |> 
+  rename(context=type)
+                        
+
+  
+```
+
+
+## Overall error rate
+
+```{r}
+with_labels |> group_by(workerid) |> summarize(m=mean(correct))
+
+with_labels |> group_by(sentence) |> mutate(pos=row_number()) |> ggplot(aes(x=workerid, y=rt, color=as.factor(correct)))+geom_point(alpha=.01)+stat_summary(data.fun="mean_ci_boot")+coord_cartesian(ylim=c(0,2000))
+
+```
+
+## Critical words
+
+```{r}
+
+context_condition <- with_labels |> ungroup() |>  select(workerid, type, number) |> unique() |> filter(type %in% c("1-context", "2-context")) |> 
+  rename(context=type)
+
+critical_only <- with_labels |> filter(type %in% c("NP", "VP")) |> 
+  filter(str_detect(critical, words)) |> 
+  mutate(split_critical=str_split(critical, " ")) |> 
+  rowwise() |>
+  filter(words %in% split_critical) |> 
+  left_join(context_condition) 
+
+ggplot(critical_only, aes(x=type, y=rt, color=context))+geom_jitter()+stat_summary(fun.data="mean_cl_boot")
+
+critical_only |> group_by(workerid) |> summarize(m=mean(correct))
+```
