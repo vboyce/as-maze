@@ -20,10 +20,3 @@ and then we can ask for what was this task probing? to check
 how many people should be run / how many items? 
 
 
-# analysis plan
-
-* check for overall error rate
-* pull out "critical words" which are 
-* RT on critical words analysis
-* check errors on critical words
-

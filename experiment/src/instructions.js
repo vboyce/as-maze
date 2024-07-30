@@ -13,7 +13,7 @@ export const INSTRUCTIONS =
   "<p>For this experiment, please place your <b>left index finger on the 'e' key</b> and" +
   " your <b>right index finger on the 'i' key</b>.</p>" +
   "<p> You will read sentences word by word. " +
-  "However, you will have to guess which word comes next." +
+  "However, you will have to guess which word comes next. " +
   "On each screen you will see two options: one will be the next word in the sentence, and one will not. </p>" +
   "<p><b>Select the word that continues the sentence by pressing 'e' (left-hand) for the word on the left or " +
   "pressing 'i' (right-hand) for the word on the right.</b></p>" +

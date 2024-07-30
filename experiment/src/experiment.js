@@ -127,6 +127,11 @@ export async function run({
     prompt: function () {
       return format_header(done, trials);
     },
+    data: {
+      sentence: jsPsych.timelineVariable("correct"),
+      type: jsPsych.timelineVariable("type"),
+      item: jsPsych.timelineVariable("item"),
+    },
   };
 
   let practice = {
