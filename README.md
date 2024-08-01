@@ -19,4 +19,6 @@ and then we can ask for what was this task probing? to check
 
 how many people should be run / how many items? 
 
-
+# Data collection
+Pilot B (31 July 2024) -- recruit 5 people @ 10 minutes (had issue with recording data)
+Pilot B take two (1 August 2024) -- recruit 5 people @ 10 minutes, 4 completed

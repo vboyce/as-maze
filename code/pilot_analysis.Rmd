@@ -36,12 +36,16 @@ options(mc.cores = parallel::detectCores())
 
 theme_set(theme_bw())
 
-dat_loc <- "data/as_maze_pilot_a-trials.csv"
+#dat_loc <- "data/as_maze_pilot_a-trials.csv"
+dat_loc <- "data/as_pilot_b-trials.csv"
+
+mod_loc <- "code/models"
 ```
 
 ```{r}
 raw <- read_csv(here(dat_loc)) |>
-  select(-proliferate.condition)
+  select(-proliferate.condition) |> 
+  filter(workerid!="939")
 
 
 
@@ -50,10 +54,18 @@ free_response <- raw |>
   filter(is.na(correct)) |>
   filter(!is.na(response)) |>
   filter(is.na(stimulus)) |>
-  select(workerid, response, rt)
+  select(workerid, response) |> 
+  mutate(across(everything(), ~ str_replace_all(.x, '"',"`"))) |> 
+  mutate(across(everything(), ~ str_replace_all(.x, "\\{'", '\\{"'))) |>
+  mutate(across(everything(), ~ str_replace_all(.x, "', '", '", "'))) |>
+  #mutate(across(everything(), ~ str_replace_all(.x, " '", ' "'))) |>
+    mutate(across(everything(), ~ str_replace_all(.x, "': '", '": "'))) |>
+  mutate(across(everything(), ~ str_replace_all(.x, "'\\}", '"\\}'))) |> 
+  mutate(response=map(response, fromJSON)) |> 
+  mutate(labels=map(response, names)) |> 
+  unnest_longer(c(response, labels))
 
 good_stuff <- raw |>
-  filter(!workerid %in% c("934", "935")) |>
   filter(!is.na(correct)) |>
   select(
     workerid, correct, cumrt, distractors, order, rt, trial_index, words
@@ -105,6 +117,11 @@ with_labels |> group_by(workerid) |> summarize(m=mean(correct))
 with_labels |> group_by(sentence) |> mutate(pos=row_number()) |> ggplot(aes(x=workerid, y=rt, color=as.factor(correct)))+geom_point(alpha=.01)+stat_summary(data.fun="mean_ci_boot")+coord_cartesian(ylim=c(0,2000))
 
 ```
+# RT over time
+
+```{r}
+with_labels |> group_by(workerid, trial_index) |> filter(rt<3000) |> summarize(m=mean(rt)) |> ggplot(aes(x=trial_index, y=m, color=workerid))+geom_point()+geom_smooth()
+```
 
 ## Critical words
 
@@ -114,13 +131,117 @@ context_condition <- with_labels |> ungroup() |>  select(workerid, type, number)
   rename(context=type)
 
 critical_only <- with_labels |> filter(type %in% c("NP", "VP")) |> 
-  filter(str_detect(critical, words)) |> 
   mutate(split_critical=str_split(critical, " ")) |> 
   rowwise() |>
   filter(words %in% split_critical) |> 
   left_join(context_condition) 
 
-ggplot(critical_only, aes(x=type, y=rt, color=context))+geom_jitter()+stat_summary(fun.data="mean_cl_boot")
+ggplot(critical_only, aes(x=type, y=rt, color=context))+geom_point(alpha=.5,position=position_jitterdodge(jitter.width=.3,dodge.width=.7))+stat_summary(fun.data="mean_cl_boot", position=position_dodge(width=.7))
 
 critical_only |> group_by(workerid) |> summarize(m=mean(correct))
+
+critical_all <- with_labels |> mutate(split_critical=str_split(critical, " ")) |> 
+  rowwise() |>
+  mutate(is_critical=(type %in% c("NP", "VP") & words %in% split_critical)) |> 
+  left_join(context_condition) 
+  
+nrow(critical_only)
+nrow(critical_all |> filter(is_critical))
+
+critical_only |> group_by(context) |> summarize(m=mean(rt))
+
+critical_only |> group_by(type) |> summarize(m=mean(rt))
+
+critical_only |> group_by(context, type) |> summarize(m=mean(rt))
+
+```
+# Model 
+
+looking *only* at critical words: 
+RT ~ type*context + (type*context|item)+(type*context|person)
+
+or same, but include all words with 0/0's so they feed per-person intercept
+
+or above but exclude errors
+
+coding: NP -.5, VP +.5
+1-context -.5, 2-context +.5
+```{r}
+
+for_mod <- critical_all |> 
+  mutate(type.numeric=case_when(
+    is_critical==F ~ 0,
+    type=="NP"~ -.5,
+    type=="VP"~ .5),
+  context.numeric=case_when(
+    is_critical==F ~ 0,
+    context=="1-context" ~ -.5,
+    context=="2-context" ~ .5),
+  item=as.character(number),
+  participant=as.character(workerid)
+  ) |> ungroup() |> 
+  select(rt, correct, type.numeric, context.numeric, item, participant, is_critical)
+  
+```
+
+```{r}
+
+priors <- c(set_prior("Intercept", "normal(800,200)"),
+            set_prior("beta", "normal(0,100)"),
+            set_prior("sd", coef="Intercept", group="participant", "halfnormal(0,200)"),
+            set_prior("sd", "halfnormal(0,100)"),
+            set_prior("cor", "lkj(1)")
+)
+            
+            
+get_prior(rt ~ type.numeric*context.numeric + 
+            (type.numeric*context.numeric|item)+
+            (1+type.numeric*context.numeric|participant), for_mod)
+
+```
+
+```{r}
+
+# primary analysis
+
+m1 <- brm(rt ~ type.numeric*context.numeric + 
+            (type.numeric*context.numeric|item)+
+            (1+type.numeric*context.numeric|participant),
+          data=for_mod |> filter(is_critical),
+          file=here(mod_loc, "m1_pilot"),
+          control=list(adapt_delta=.99))
+
+```
+
+```{r}
+
+m2 <- brm(rt ~ type.numeric*context.numeric + 
+            (type.numeric*context.numeric|item)+
+            (1+type.numeric*context.numeric|participant),
+          data=for_mod |> filter(is_critical) |> filter(correct==1),
+          file=here(mod_loc, "m2_pilot"),
+          control=list(adapt_delta=.99))
+
+```
+
+```{r}
+
+m3 <- brm(rt ~ type.numeric*context.numeric + 
+            (type.numeric*context.numeric|item)+
+            (1+type.numeric*context.numeric|participant),
+          data=for_mod,
+          file=here(mod_loc, "m3_pilot"),
+          control=list(adapt_delta=.99))
+
+```
+
+```{r}
+
+m4 <- brm(rt ~ type.numeric*context.numeric + 
+            (type.numeric*context.numeric|item)+
+            (1+type.numeric*context.numeric|participant),
+          data=for_mod |> filter(correct==1),
+          file=here(mod_loc, "m4_pilot"),
+          control=list(adapt_delta=.99))
+
 ```
