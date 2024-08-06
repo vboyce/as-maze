@@ -87,9 +87,9 @@ free_response <- raw |>
   filter(is.na(correct)) |>
   filter(!is.na(response)) |>
   filter(is.na(stimulus)) |>
-  select(workerid, response) |> 
-  mutate(response=str_replace_all(response, "\\{", "") |> str_replace_all("\\}","") |> str_replace_all("'", '"') )|> 
-  separate(response, into=c("blah", "blah1", "blah2", "blah3", "blah4", "blah5"), sep='", "')
+  select(workerid, response) |>
+  mutate(response = str_replace_all(response, "\\{", "") |> str_replace_all("\\}", "") |> str_replace_all("'", '"')) |>
+  separate(response, into = c("blah", "blah1", "blah2", "blah3", "blah4", "blah5"), sep = '", "')
 
 good_stuff <- raw |>
   filter(!is.na(correct)) |>
@@ -122,16 +122,16 @@ critical <- read_delim(here("materials/labelled.txt"), ";", col_names = c("type"
 with_labels <- good_stuff |>
   left_join(sentences) |>
   left_join(post_maze) |>
-  separate(number, c("number", "subpart")) |> 
-    mutate(number=as.numeric(number)) |> 
-  left_join(critical) |> 
+  separate(number, c("number", "subpart")) |>
+  mutate(number = as.numeric(number)) |>
+  left_join(critical) |>
   filter(!is.na(type))
 
-context_condition <- with_labels |> select(workerid, type, number) |> unique() |> filter(type %in% c("1-context", "2-context")) |> 
-  rename(context=type)
-                        
-
-  
+context_condition <- with_labels |>
+  select(workerid, type, number) |>
+  unique() |>
+  filter(type %in% c("1-context", "2-context")) |>
+  rename(context = type)
 ```
 
 # Checks 
@@ -141,8 +141,13 @@ Participants accuracy was generally good. Per a pre-registraction, I excluded pa
 We are left with 88 participants. 
 
 ```{r}
-with_labels |> group_by(workerid) |> summarize(m=mean(correct)) |> ggplot(aes(x=m))+geom_histogram()+geom_vline(xintercept=.9, color="red")+labs(x="Mean Maze accuracy")
-
+with_labels |>
+  group_by(workerid) |>
+  summarize(m = mean(correct)) |>
+  ggplot(aes(x = m)) +
+  geom_histogram() +
+  geom_vline(xintercept = .9, color = "red") +
+  labs(x = "Mean Maze accuracy")
 ```
 
 ## Exclusions
@@ -150,12 +155,18 @@ with_labels |> group_by(workerid) |> summarize(m=mean(correct)) |> ggplot(aes(x=
 We only include participants who completed the experiment, had an accuracy above 90%. We exclude words with RTs >200 or <3000. 
 
 ```{r}
-include_error <- with_labels |> group_by(workerid) |> summarize(m=mean(correct)) |> filter(m>.9)
-#88 people included
+include_error <- with_labels |>
+  group_by(workerid) |>
+  summarize(m = mean(correct)) |>
+  filter(m > .9)
+# 88 people included
 
-#with_labels |> inner_join(include_error |> select(workerid)) |> select(workerid, number) |> unique() |> group_by(workerid) |> tally() |> filter(n==48) #all of these finished
+# with_labels |> inner_join(include_error |> select(workerid)) |> select(workerid, number) |> unique() |> group_by(workerid) |> tally() |> filter(n==48) #all of these finished
 
-filtered <- with_labels |> inner_join(include_error |> select(workerid)) |> filter(rt>200) |> filter(rt<3000)
+filtered <- with_labels |>
+  inner_join(include_error |> select(workerid)) |>
+  filter(rt > 200) |>
+  filter(rt < 3000)
 ```
 
 ## Speed
@@ -163,14 +174,25 @@ filtered <- with_labels |> inner_join(include_error |> select(workerid)) |> filt
 Participants overall RTs on items they got correct. Average speeds vary considerably per individuals. 
 
 ```{r}
-filtered |> filter(correct==1)|> ggplot(aes(x=reorder(workerid, rt), y=rt))+geom_point(alpha=.005)+stat_summary(fun.data="mean_cl_boot")+theme(axis.ticks.x=element_blank(), axis.text.x=element_blank())+labs(x="Participant")+scale_y_continuous(breaks=seq(500,2000,250))
-
+filtered |>
+  filter(correct == 1) |>
+  ggplot(aes(x = reorder(workerid, rt), y = rt)) +
+  geom_point(alpha = .005) +
+  stat_summary(fun.data = "mean_cl_boot") +
+  theme(axis.ticks.x = element_blank(), axis.text.x = element_blank()) +
+  labs(x = "Participant") +
+  scale_y_continuous(breaks = seq(500, 2000, 250))
 ```
 
 Participants tend to get slightly faster over time. 
 
 ```{r}
-filtered |> group_by(workerid, trial_index) |> summarize(m=mean(rt)) |>  ggplot(aes(x=trial_index, y=m, group=workerid))+geom_smooth(se=F)+labs(y="RT", x="Trial")
+filtered |>
+  group_by(workerid, trial_index) |>
+  summarize(m = mean(rt)) |>
+  ggplot(aes(x = trial_index, y = m, group = workerid)) +
+  geom_smooth(se = F) +
+  labs(y = "RT", x = "Trial")
 ```
 
 # Main graph
@@ -179,22 +201,29 @@ I confirm that participants are generally correct on the critical words!
 
 
 ```{r}
+context_condition <- filtered |>
+  ungroup() |>
+  select(workerid, type, number) |>
+  unique() |>
+  filter(type %in% c("1-context", "2-context")) |>
+  rename(context = type)
 
-context_condition <- filtered |> ungroup() |>  select(workerid, type, number) |> unique() |> filter(type %in% c("1-context", "2-context")) |> 
-  rename(context=type)
-
-critical_only <- filtered |> filter(type %in% c("NP", "VP")) |> 
-  mutate(split_critical=str_split(critical, " ")) |> 
+critical_only <- filtered |>
+  filter(type %in% c("NP", "VP")) |>
+  mutate(split_critical = str_split(critical, " ")) |>
   rowwise() |>
-    mutate(parts=length(split_critical)) |> 
-  filter(words %in% split_critical) |> 
-  left_join(context_condition) 
-
+  mutate(parts = length(split_critical)) |>
+  filter(words %in% split_critical) |>
+  left_join(context_condition)
 ```
 
 
 ```{r}
-critical_only |> group_by(workerid) |> summarize(m=mean(correct)) |> ggplot(aes(m))+geom_histogram()
+critical_only |>
+  group_by(workerid) |>
+  summarize(m = mean(correct)) |>
+  ggplot(aes(m)) +
+  geom_histogram()
 ```
 
 Graphs show bootstrapped 95% CIs. 
@@ -202,16 +231,16 @@ Graphs show bootstrapped 95% CIs.
 Including both correct and incorrect RTs, we recover an overall interaction pattern. 
 
 ```{r}
-ggplot(critical_only, aes(x=type, y=rt, color=context))+#geom_point(alpha=.05,position=position_jitterdodge(jitter.width=.3,dodge.width=.7))+
-  stat_summary(fun.data="mean_cl_boot", position=position_dodge(width=.7))
+ggplot(critical_only, aes(x = type, y = rt, color = context)) + # geom_point(alpha=.05,position=position_jitterdodge(jitter.width=.3,dodge.width=.7))+
+  stat_summary(fun.data = "mean_cl_boot", position = position_dodge(width = .7))
 ```
 
 It is quite similar if we only include correct RTs
 
 
 ```{r}
-ggplot(critical_only |> filter(correct==1), aes(x=type, y=rt, color=context))+#geom_point(alpha=.05,position=position_jitterdodge(jitter.width=.3,dodge.width=.7))+
-  stat_summary(fun.data="mean_cl_boot", position=position_dodge(width=.7))
+ggplot(critical_only |> filter(correct == 1), aes(x = type, y = rt, color = context)) + # geom_point(alpha=.05,position=position_jitterdodge(jitter.width=.3,dodge.width=.7))+
+  stat_summary(fun.data = "mean_cl_boot", position = position_dodge(width = .7))
 ```
 
 Compare their figure 3: 
@@ -241,40 +270,42 @@ Because of the different types of sentences, it's not clear how we should expect
 For this we also exclude the one item with one two-word and one one-word. 
 
 ```{r}
-#ggplot(critical_only, aes(x=type, y=rt, color=context))+  stat_summary(fun.data="mean_cl_boot", position=position_dodge(width=.7))+facet_wrap(~parts)
+# ggplot(critical_only, aes(x=type, y=rt, color=context))+  stat_summary(fun.data="mean_cl_boot", position=position_dodge(width=.7))+facet_wrap(~parts)
 
-filtered |> filter(type %in% c("NP", "VP")) |> 
-  separate(critical, c("crit1", "crit2")) |> 
+filtered |>
+  filter(type %in% c("NP", "VP")) |>
+  separate(critical, c("crit1", "crit2")) |>
   rowwise() |>
-  filter(words==crit1 |words==crit2) |> 
-  mutate(part=case_when(
+  filter(words == crit1 | words == crit2) |>
+  mutate(part = case_when(
     is.na(crit2) ~ "singleton",
-    words==crit1 ~ "first",
-    words==crit2 ~ "second"
-  )) |> 
-  #filter(number!=1) |> 
-  left_join(context_condition) |> ggplot(aes(x=type, y=rt, color=context))+  stat_summary(fun.data="mean_cl_boot", position=position_dodge(width=.7))+facet_wrap(~part)
-
-  
+    words == crit1 ~ "first",
+    words == crit2 ~ "second"
+  )) |>
+  # filter(number!=1) |>
+  left_join(context_condition) |>
+  ggplot(aes(x = type, y = rt, color = context)) +
+  stat_summary(fun.data = "mean_cl_boot", position = position_dodge(width = .7)) +
+  facet_wrap(~part)
 ```
 
 So, we're seeing roughly the same pattern on all of them, although less of an NP difference on the one-word ones (note wide error bars everywhere)
 
 ```{r}
-critical_all <- filtered |> mutate(split_critical=str_split(critical, " ")) |> 
+critical_all <- filtered |>
+  mutate(split_critical = str_split(critical, " ")) |>
   rowwise() |>
-  mutate(is_critical=(type %in% c("NP", "VP") & words %in% split_critical)) |> 
-  left_join(context_condition) 
-  
-#nrow(critical_only)
-#nrow(critical_all |> filter(is_critical))
+  mutate(is_critical = (type %in% c("NP", "VP") & words %in% split_critical)) |>
+  left_join(context_condition)
 
-#critical_only |> group_by(context) |> summarize(m=mean(rt))
+# nrow(critical_only)
+# nrow(critical_all |> filter(is_critical))
 
-#critical_only |> group_by(type) |> summarize(m=mean(rt))
+# critical_only |> group_by(context) |> summarize(m=mean(rt))
 
-#critical_only |> group_by(context, type) |> summarize(m=mean(rt))
+# critical_only |> group_by(type) |> summarize(m=mean(rt))
 
+# critical_only |> group_by(context, type) |> summarize(m=mean(rt))
 ```
 
 # Models
@@ -294,47 +325,47 @@ We use weakly regularizing priors.
 including both correct and incorrect responses
 
 ```{r}
-
-for_mod <- critical_all |> 
-  mutate(type.numeric=case_when(
-    is_critical==F ~ 0,
-    type=="NP"~ -.5,
-    type=="VP"~ .5),
-  context.numeric=case_when(
-    is_critical==F ~ 0,
-    context=="1-context" ~ -.5,
-    context=="2-context" ~ .5),
-  item=as.character(number),
-  participant=as.character(workerid)
-  ) |> ungroup() |> 
+for_mod <- critical_all |>
+  mutate(
+    type.numeric = case_when(
+      is_critical == F ~ 0,
+      type == "NP" ~ -.5,
+      type == "VP" ~ .5
+    ),
+    context.numeric = case_when(
+      is_critical == F ~ 0,
+      context == "1-context" ~ -.5,
+      context == "2-context" ~ .5
+    ),
+    item = as.character(number),
+    participant = as.character(workerid)
+  ) |>
+  ungroup() |>
   select(rt, correct, type.numeric, context.numeric, item, participant, is_critical)
-  
 ```
 
 ```{r}
-
-priors <- c(prior(normal(800,200), class="Intercept"),
-            prior(normal(0,100), class=b),
-            prior(normal(0,200), class=sd, coef=Intercept, group=participant),
-            prior(normal(0,100), lb=0, class=sd),
-            prior(lkj(1), class=cor))
-
-    
-
+priors <- c(
+  prior(normal(800, 200), class = "Intercept"),
+  prior(normal(0, 100), class = b),
+  prior(normal(0, 200), class = sd, coef = Intercept, group = participant),
+  prior(normal(0, 100), lb = 0, class = sd),
+  prior(lkj(1), class = cor)
+)
 ```
 
 ```{r}
-
 # primary analysis
 
-m1 <- brm(rt ~ type.numeric*context.numeric + 
-            (type.numeric*context.numeric|item)+
-            (1+type.numeric*context.numeric|participant),
-          data=for_mod |> filter(is_critical),
-          prior=priors,
-          file=here(mod_loc, "m1"),
-          control=list(adapt_delta=.99))
-
+m1 <- brm(
+  rt ~ type.numeric * context.numeric +
+    (type.numeric * context.numeric | item) +
+    (1 + type.numeric * context.numeric | participant),
+  data = for_mod |> filter(is_critical),
+  prior = priors,
+  file = here(mod_loc, "m1"),
+  control = list(adapt_delta = .99)
+)
 ```
 ```{r}
 summary(m1)
@@ -342,29 +373,35 @@ summary(m1)
 
 ## Additional models
 
+
+### Only correct
+
 It's slightly clearer if we filter for only the correct answers
 
 ```{r}
-
-m2 <- brm(rt ~ type.numeric*context.numeric + 
-            (type.numeric*context.numeric|item)+
-            (1+type.numeric*context.numeric|participant),
-          data=for_mod |> filter(is_critical) |> filter(correct==1),
-          prior=priors,
-          file=here(mod_loc, "m2"),
-          control=list(adapt_delta=.99))
+m2 <- brm(
+  rt ~ type.numeric * context.numeric +
+    (type.numeric * context.numeric | item) +
+    (1 + type.numeric * context.numeric | participant),
+  data = for_mod |> filter(is_critical) |> filter(correct == 1),
+  prior = priors,
+  file = here(mod_loc, "m2"),
+  control = list(adapt_delta = .99)
+)
 summary(m2)
 ```
 
 ```{r}
 # library(lme4)
-# 
-# m1_lm <- lmer(rt ~ type.numeric*context.numeric + 
+#
+# m1_lm <- lmer(rt ~ type.numeric*context.numeric +
 #             (type.numeric*context.numeric|item)+
 #             (1+type.numeric*context.numeric|participant),
 #           data=for_mod |> filter(is_critical))
 # boundary singular: right that's why I don't use lmer, I forgot
 ```
+
+### Sum multi-word
 
 As mentioned, there's some question of what to do with the multi-word versus one-word stuff. Here we 
 
@@ -373,46 +410,144 @@ As mentioned, there's some question of what to do with the multi-word versus one
 * add a predictor for whether it was multiword (because multi-word will be longer RTs overall)
 
 ```{r}
+grouped_mod <- for_mod |>
+  filter(is_critical) |>
+  group_by(item, participant, type.numeric, context.numeric) |>
+  summarize(correct = sum(correct), n = n(), rt = sum(rt)) |>
+  filter(correct == n) |>
+  mutate(multi = (n > 1))
 
-grouped_mod <- for_mod |> filter(is_critical) |> group_by(item, participant, type.numeric, context.numeric) |> 
-  summarize(correct=sum(correct), n=n(), rt=sum(rt)) |> filter(correct==n) |> mutate(multi=(n>1))
-
-m_grouped <- brm(rt ~ type.numeric*context.numeric + multi+
-            (type.numeric*context.numeric|item)+
-            (1+type.numeric*context.numeric+ multi|participant),
-          data=grouped_mod,
-          prior=priors,
-          file=here(mod_loc, "m_grouped"),
-          control=list(adapt_delta=.99))
-
+m_grouped <- brm(
+  rt ~ type.numeric * context.numeric + multi +
+    (type.numeric * context.numeric | item) +
+    (1 + type.numeric * context.numeric + multi | participant),
+  data = grouped_mod,
+  prior = priors,
+  file = here(mod_loc, "m_grouped"),
+  control = list(adapt_delta = .99)
+)
 ```
 ```{r}
 summary(m_grouped)
 ```
 
-Participants overall reading speed is pretty variable, so we could try to determine that on the basis of all the other words and add that as a predictor (rather than currently just estimating on the basis of the 16 critical regions). Alternatively, could add word-level properties in, etc. All of this would introduce more degrees of researcher freedom. 
+
+
+### Residualize
+
+Using length + freq as predictors per-participant in an lm, then using those (fixef estimates)  to calculate a "predicted" value for critical words and subtracting that off. 
 
 ```{r}
+freq <- read_csv("wordfreq.csv") |>
+  select(-`...1`) |>
+  mutate(
+    center_freq = scale(freq, scale = F)[, 1],
+    center_len = scale(str_length(words), scale = F)[, 1]
+  )
+
+residual_preds <- critical_all |>
+  left_join(freq) |>
+  filter(!is_critical) |>
+  filter(correct == 1) |>
+  ungroup() |>
+  select(workerid, center_freq, center_len, rt) |>
+  group_by(workerid) |>
+  nest() |>
+  rowwise() |>
+  mutate(preds = list(lm(rt ~ center_freq + center_len, data = data)$coefficients)) |>
+  select(-data) |>
+  unnest_wider(preds, names_sep = "_")
+```
+
+```{r}
+residuals <- critical_all |>
+  filter(is_critical) |>
+  filter(correct == 1) |>
+  left_join(freq) |>
+  left_join(residual_preds) |>
+  mutate(
+    predicted = `preds_(Intercept)` + center_freq * preds_center_freq + center_len * preds_center_len,
+    resid = rt - predicted
+  ) |>
+  mutate(
+    type.numeric = case_when(
+      type == "NP" ~ -.5,
+      type == "VP" ~ .5
+    ),
+    context.numeric = case_when(
+      context == "1-context" ~ -.5,
+      context == "2-context" ~ .5
+    ),
+    item = as.character(number),
+    participant = as.character(workerid)
+  ) |>
+  ungroup()
 
 
+ggplot(residuals, aes(x = type, y = resid, color = context)) + # geom_point(alpha=.05,position=position_jitterdodge(jitter.width=.3,dodge.width=.7))+
+  stat_summary(fun.data = "mean_cl_boot", position = position_dodge(width = .7))
+```
 
-# would take too long to run
-# m3 <- brm(rt ~ type.numeric*context.numeric + 
-#             (type.numeric*context.numeric|item)+
-#             (1+type.numeric*context.numeric|participant),
-#           data=for_mod,
-#           prior=priors,
-#           file=here(mod_loc, "m3"),
-#           control=list(adapt_delta=.99))
-# 
-# 
-# would take too long to run 
-# m4 <- brm(rt ~ type.numeric*context.numeric + 
-#             (type.numeric*context.numeric|item)+
-#             (1+type.numeric*context.numeric|participant),
-#           data=for_mod |> filter(correct==1),
-#           prior=priors,
-#           file=here(mod_loc, "m4"),
-#           control=list(adapt_delta=.99))
+```{r}
+#library(lme4)
+#lm_resid <- lmer(resid ~ type.numeric * context.numeric + (1 | item) + (1 | participant), data = residuals)
 
+#lm_rt <- lmer(rt ~ type.numeric * context.numeric + (1 | item) + (1 | participant), data = residuals)
+```
+
+```{r}
+m_resid <- brm(
+  resid ~ type.numeric * context.numeric +
+    (type.numeric * context.numeric | item) +
+    (1 + type.numeric * context.numeric | participant),
+  data = residuals,
+  prior = priors,
+  file = here(mod_loc, "m_resid"),
+  control = list(adapt_delta = .99)
+)
+```
+
+### Residualize, then sum
+
+```{r}
+# resid and group
+grouped_residuals <- critical_all |>
+  filter(is_critical) |>
+  left_join(freq) |>
+  left_join(residual_preds) |>
+  mutate(
+    predicted = `preds_(Intercept)` + center_freq * preds_center_freq + center_len * preds_center_len,
+    resid = rt - predicted
+  ) |>
+  mutate(
+    type.numeric = case_when(
+      type == "NP" ~ -.5,
+      type == "VP" ~ .5
+    ),
+    context.numeric = case_when(
+      context == "1-context" ~ -.5,
+      context == "2-context" ~ .5
+    ),
+    item = as.character(number),
+    participant = as.character(workerid)
+  ) |>
+  ungroup() |>
+  group_by(item, participant, type.numeric, context.numeric) |>
+  summarize(correct = sum(correct), n = n(), resid = sum(resid)) |>
+  filter(correct == n) |>
+  mutate(multi = (n > 1))
+```
+
+```{r}
+m_group_resid <- brm(
+  resid ~ type.numeric * context.numeric + multi +
+    (type.numeric * context.numeric | item) +
+    (1 + type.numeric * context.numeric | participant),
+  data = grouped_residuals,
+  prior = priors,
+  file = here(mod_loc, "m_group_resid"),
+  control = list(adapt_delta = .99)
+)
+
+summary(m_group_resid)
 ```
