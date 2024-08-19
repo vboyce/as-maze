@@ -13,6 +13,7 @@ import MazePlugin from "./maze.js";
 
 import { initJsPsych } from "jspsych";
 
+import HtmlKeyboardResponsePlugin from "@jspsych/plugin-html-keyboard-response";
 import HtmlButtonResponsePlugin from "@jspsych/plugin-html-button-response";
 import PreloadPlugin from "@jspsych/plugin-preload";
 import CallFunctionPlugin from "@jspsych/plugin-call-function";
@@ -52,6 +53,8 @@ export async function run({
   version,
 }) {
   const jsPsych = initJsPsych({
+    show_progress_bar: true,
+    auto_update_progress_bar: false,
     on_close: function () {
       //console.log("start the thing");
       var data = jsPsych.data.get().values();
@@ -72,7 +75,7 @@ export async function run({
   });
 
   let countCorrect = 0;
-  let done = 1;
+  let done = 0;
   let consent = {
     type: HtmlButtonResponsePlugin,
     stimulus: CONSENT,
@@ -85,6 +88,10 @@ export async function run({
     stimulus: INSTRUCTIONS,
     choices: ["Continue"],
     response_ends_trial: true,
+    on_finish: function () {
+      done++;
+      jsPsych.setProgressBar(done / 20);
+    },
   };
 
   let instructions2 = {
@@ -92,11 +99,18 @@ export async function run({
     stimulus: INSTRUCTIONS2,
     choices: ["Continue"],
     response_ends_trial: true,
+    on_finish: function () {
+      done++;
+      jsPsych.setProgressBar(done / 20);
+    },
   };
   let post_test_questions = {
     type: SurveyTextPlugin,
     preamble: POST_SURVEY_TEXT,
     questions: POST_SURVEY_QS,
+    on_finish: function () {
+      jsPsych.setProgressBar(1);
+    },
   };
 
   let end_experiment = {
@@ -125,28 +139,35 @@ export async function run({
   };
   let practice = {
     type: MazePlugin,
-    correct:
-      "This is a practice sentence that you are reading one word at a time.",
-    distractor:
-      "x-x-x whom knew appeared emotions know dad lake edition jack fans fund grow died.",
+    correct: "The dog chased the squirrel up a tree.",
+    distractor: "x-x-x no lake grow appeal died sun runs.",
     css_classes: ["maze-display"],
     prompt: function () {
-      return "<p>Practice</p><p> Select the next word by pressing <b>e</b> (left) or <b>i</b> (right).</p>";
+      return (
+        "<p>Practice</p><br><p> Select the word that will make a sentence by pressing <b>e</b> or <b>i</b>.</p><br><br>" +
+        "<h1> <b>e</b> " +
+        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>i</b> </h1>"
+      );
+    },
+    on_finish: function () {
+      done++;
+      jsPsych.setProgressBar(done / 20);
     },
   };
   let spacer = {
-    type: HtmlButtonResponsePlugin,
+    type: HtmlKeyboardResponsePlugin,
     stimulus: function () {
       console.log(jsPsych.timelineVariable("img"));
       return (
         '<img  style="width: 800px;" src=assets/images/' +
         jsPsych.timelineVariable("img") +
-        "> <br><br>"
+        "> <br><br><p>Press spacebar to continue.</p>"
       );
     },
-    choices: ["Continue"],
+    choices: [" "],
     on_finish: function () {
       done++;
+      jsPsych.setProgressBar(done / 20);
     },
   };
 
@@ -161,9 +182,9 @@ export async function run({
     timeline.push(preload);
 
     //timeline.push(consent);
-    //timeline.push(instructions);
-    //timeline.push(practice);
-    //timeline.push(instructions2);
+    timeline.push(instructions);
+    timeline.push(practice);
+    timeline.push(instructions2);
     let mini_timeline = {
       timeline: [trial, spacer],
       timeline_variables: stimuli,

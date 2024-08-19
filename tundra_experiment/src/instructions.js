@@ -9,39 +9,33 @@ export const CONSENT =
   "your participation will not receive any personal information about you. </div></br>";
 
 export const INSTRUCTIONS =
+  "<h2> Thanks for helping us out by testing out our experiment!<h2><br>" +
   "<h3>Please read these instructions carefully!</h3> </br>" +
   "<p>For this experiment, please place your <b>left index finger on the 'e' key</b> and" +
   " your <b>right index finger on the 'i' key</b>.</p>" +
   "<p> You will read sentences word by word. " +
-  "However, you will have to guess which word comes next. " +
-  "On each screen you will see two options: one will be the next word in the sentence, and one will not. </p>" +
-  "<p><b>Select the word that continues the sentence by pressing 'e' (left-hand) for the word on the left or " +
+  "However, you will have to guess which word comes next.</p> " +
+  "<p>On each screen you will see <b>two</b> options: one will be the next word in the sentence, and one will not. </p>" +
+  "<p><b>Select the word that continues the sentence by pressing 'e' (left-hand) for the word on the left <br>or" +
   "pressing 'i' (right-hand) for the word on the right.</b></p>" +
   "<p>Select the best word as quickly as you can, but without making too many errors. </p>" +
   '<div><p>Click "Continue" to try this on a practice sentence.</p></div>';
 
 export const INSTRUCTIONS2 =
-  "<h3>Please read these instructions carefully!</h3> </br>" +
   "<p>Great job! Now you are ready for the main experiment.</p>" +
-  "<p> You will now read 16 short stories in the same word-by-word way.</p>" +
+  "<p> You will now read a paragraph in the same word-by-word way.</p>" +
   '<div><p>Click "Continue" to start the experiment.</p>';
 
 export const POST_SURVEY_TEXT =
   "<h1>End of the experiment.</h1>" +
-  "Before you go, we have a couple questions about your experience.</br>" +
-  "Your " +
-  "thoughtful responses here will help us make our future experiments better.";
+  "Before you go, we have a couple questions.</br>" +
+  "Your answers here will help us design better future experiments.";
 
 export const POST_SURVEY_QS = [
   {
-    prompt: "What did you think this experiment was about?",
-    name: "what-about",
-    rows: 4,
-  },
-  {
-    prompt: "Did you notice anything strange about the stories you read?",
-    name: "strange",
-    rows: 4,
+    prompt: "How old are you (in years)?",
+    name: "age",
+    rows: 1,
   },
   {
     prompt:
@@ -51,9 +45,7 @@ export const POST_SURVEY_QS = [
     rows: 4,
   },
   {
-    prompt:
-      "How was the task length? Would you have " +
-      "preferred a shorter or longer task? ",
+    prompt: "How was your experience? Fun? Boring? Too hard?",
     name: "length",
     rows: 4,
   },
@@ -66,5 +58,6 @@ export const POST_SURVEY_QS = [
 ];
 export const DEBRIEF =
   "<h2>Many thanks for participating!</h2>" +
-  "<p>We are interested in how people integrate the words they read into the context of the sentence so far." +
-  "<h1>Press continue to be redirected to Prolific. </h1>";
+  "<p>We are trying to see whether this way of reading sentences word by word <br> can be used to measure the language processing in younger people.</p>" +
+  "<p>The text was adapted from Wikipedia articles and the images were from Wikipedia and Wikimedia Commons.</p>" +
+  "<h1>Press continue to finish. </h1>";
