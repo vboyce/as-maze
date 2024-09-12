@@ -1,0 +1,117 @@
+---
+title: "Pilot Analysis"
+output:
+  html_document:
+    toc: true
+    df_print: paged
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = F, message = F)
+knitr::opts_chunk$set(dev = "png", dev.args = list(type = "cairo-png"))
+options(knitr.table.format = "html")
+knitr::opts_chunk$set(echo = F)
+library(tidyverse)
+library(viridis)
+library(Replicate)
+library(metafor)
+library(esc)
+library(here)
+library(brms)
+library(rstan)
+library(googledrive)
+library(glmnet)
+library(tidybayes)
+library(ggstance)
+library("lattice")
+library(reshape2)
+library(ggrepel)
+library(ggthemes)
+library(knitr)
+library(cowplot)
+library(jsonlite)
+rstan_options(auto_write = TRUE)
+options(mc.cores = parallel::detectCores())
+
+theme_set(theme_bw())
+
+dat_loc <- "tundra_data/tundra_maze-trials.csv"
+
+```
+
+
+```{r}
+raw <- read_csv(here(dat_loc)) |>
+  select(-proliferate.condition)
+
+
+
+
+free_response <- raw |>
+  filter(is.na(correct)) |>
+  filter(!is.na(response)) |>
+  filter(is.na(stimulus)) |>
+  select(workerid, response) |> 
+  mutate(response = str_replace_all(response, "\\{", "") |> str_replace_all("\\}", "") |> str_replace_all("'", '"')) |>
+  separate(response, into = c("blah", "blah1", "blah2", "blah3", "blah4", "blah5"), sep = '", "')
+
+# kids are 1060, 1058, 1059
+
+good_stuff <- raw |>
+  filter(!is.na(correct)) |>
+  select(
+    workerid, correct, cumrt, distractors, order, rt, trial_index, words
+  ) |>
+  mutate(workerid = as.factor(workerid)) |>
+  group_by(workerid, trial_index) |>
+  mutate(across(everything(), ~ str_replace_all(.x, "\\['", '\\["'))) |>
+  mutate(across(everything(), ~ str_replace_all(.x, "',", '",'))) |>
+  mutate(across(everything(), ~ str_replace_all(.x, " '", ' "'))) |>
+  mutate(across(everything(), ~ str_replace_all(.x, "'\\]", '"\\]'))) |>
+  mutate(correct = map(correct, fromJSON)) |>
+  mutate(cumrt = map(cumrt, fromJSON)) |>
+  mutate(distractors = map(distractors, fromJSON)) |>
+  mutate(order = map(order, fromJSON)) |>
+  mutate(rt = map(rt, fromJSON)) |>
+  mutate(words = map(words, fromJSON)) |>
+  unnest_longer(c("correct", "cumrt", "words", "distractors", "order", "rt"))
+
+kids <- good_stuff |> filter(workerid %in% c(1060, 1058, 1059))
+
+```
+
+# Checks 
+## Overall error rate
+
+Participants accuracy was generally good. Per a pre-registraction, I excluded participants with overall Maze accuracy rates less than .9 (based on pilot where are 4 got 95%+, and other recent papers reporting 97% accuracy). 
+We are left with 88 participants. 
+
+```{r}
+
+kids|>
+  group_by(workerid) |>
+  summarize(m = mean(correct)) |>
+  ggplot(aes(x = m)) +
+  geom_histogram() +
+  geom_vline(xintercept = .9, color = "red") +
+  labs(x = "Mean Maze accuracy")
+```
+
+
+## Speed
+
+```{r}
+kids |>
+  filter(correct == 1) |>
+  ggplot(aes(x = reorder(workerid, rt), y = rt)) +
+  geom_point(alpha = .05) +
+  coord_cartesian(ylim=c(0,5000))+
+  stat_summary(fun.data = "mean_cl_boot") +
+  labs(x = "Participant") 
+
+kids |> filter(correct==1) |> group_by(workerid) |> summarize(mean=mean(rt), median=median(rt))
+
+```
+
+

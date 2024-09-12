@@ -1,0 +1,15 @@
+1; The arctic tundra is a biome found in the far north. 
+2; In the tundra, tree growth is hindered by low temperatures and short growing seasons. 
+3; Most of the water is frozen in the soil which prevents trees from putting down roots, and harsh winds also keep trees from growing large. 
+4; Instead, plants like grasses, mosses, and lichens grow in the tundra. 
+5; The deep and cold snow makes life in the tundra difficult, so not very many different animals live there. 
+6; The animals that do have adaptations to survive in the harsh climate. 
+7; The arctic fox keeps warm with a thick fur coat which provides the best insulation of any mammal. 
+8; Its coat changes color from brown in the summer to white in the winter to blend in with the snow. 
+9; The arctic hare also has brown hair in the summer and white hair in winter, to camouflage itself. 
+10; They often dig holes in the ground or under the snow to keep warm and to sleep. 
+11; Another tundra dweller is the reindeer, also known as the caribou. 
+12; Unlike other types of deer, both male and female reindeer have antlers, but, like other deer, they live in herds. 
+13; During migrations from warmer to cooler areas, reindeer herds combine to form giant herds of thousands of animals. 
+14; Reindeer were domesticated three thousand years ago and have since been used to pull sleds and for milk. 
+15; They are the only deer species that has been domesticated. 
