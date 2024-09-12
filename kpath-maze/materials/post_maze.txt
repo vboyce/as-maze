@@ -1,0 +1,12 @@
+ambig; 1;The boy will put the fish on the sponge on the plate.;x-x-x gone sale jack app whom nor yeah audits pre vote seeks.;1 2 3 4 5 6 PP1 det1 noun1 PP2 det2 noun2
+that; 1;The boy will put the fish that's on the sponge on the plate.;x-x-x gone sale jack app whom movies nor yeah audits pre vote seeks.;1 2 3 4 5 6 that PP1 det1 noun1 PP2 det2 noun2
+ambig; 2;The boy will put the apple on the napkin in the bowl.;x-x-x upon cash laws term ought vs guys levies sir ran rely.;1 2 3 4 5 6 PP1 det1 noun1 PP2 det2 noun2
+that; 2;The boy will put the apple that's on the napkin in the bowl.;x-x-x upon cash laws term ought decide vs guys levies sir ran rely.;1 2 3 4 5 6 that PP1 det1 noun1 PP2 det2 noun2
+ambig; 3;The girl will put the frog on the table on the chair.;x-x-x else anti cent ago reap fact glad shall non sold cents.;1 2 3 4 5 6 PP1 det1 noun1 PP2 det2 noun2
+that; 3;The girl will put the frog that's on the table on the chair.;x-x-x else anti cent ago reap senate fact glad shall non sold cents.;1 2 3 4 5 6 that PP1 det1 noun1 PP2 det2 noun2
+ambig; 4;The girl will put the cat on the towel in the box.;x-x-x grow luck wall did tend fund guy watts soul died led.;1 2 3 4 5 6 PP1 det1 noun1 PP2 det2 noun2
+ambig; 4;The girl will put the cat that's on the towel in the box.;x-x-x grow luck wall did tend senior fund guy watts soul died led.;1 2 3 4 5 6 that PP1 det1 noun1 PP2 det2 noun2
+filler; 5;The girl will collect all the leaves in the basket.;x-x-x hurt cool rangers met miss bureau dad lose denies.;0 1 2 3 4 5 6 7 8 9
+filler; 6;The boy will water the flowers with the watering can.;x-x-x eat okay china lady suppose drug know presided yes.;0 1 2 3 4 5 6 7 8 9
+filler; 7;The boy will cut the pepper and tomatoes on the cutting board.;x-x-x shut loss lake hear namely sort assessed fun knew anymore learn.;0 1 2 3 4 5 6 7 8 9 10 11
+filler; 8;The girl will watch the duck swimming in the pond.;x-x-x none hill miles mark sued sciences lack tax fiat.;0 1 2 3 4 5 6 7 8 9
