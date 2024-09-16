@@ -1,11 +1,21 @@
 import { shuffle } from "./helper.js";
-let raw_choices = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"];
-shuffle(raw_choices);
+let raw_choices = [
+  "apple_1",
+  "apple_2",
+  "cat_1",
+  "cat_2",
+  "filler_cut",
+  "filler_duck",
+  "filler_leaf",
+  "filler_water",
+  "fish_1",
+  "fish_2",
+  "frog_1",
+  "frog_2",
+];
 
 export const choices = raw_choices;
-export const all_images = choices.map(
-  (c) => "assets/images/tangram_" + c + ".png"
-);
+export const all_images = choices.map((c) => "assets/images/" + c + ".png");
 
 export function format_header(done, trials) {
   return (

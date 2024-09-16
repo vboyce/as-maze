@@ -23,9 +23,9 @@ export const INSTRUCTIONS =
 export const INSTRUCTIONS2 =
   "<h3>Please read these instructions carefully!</h3> </br>" +
   "<p>Great job! </p>" +
-  "<p> In this experiment, you will <b>see a scene</b> for 3 seconds and then </p>" +
+  "<p> In this experiment, you will <b>see a scene for 5 seconds</b> and then </p>" +
   "<p>you will <b>read a sentence</b> describing what will happen next.</p>" +
-  "<p> There will be 8 scenes total.</p>";
+  "<p> There will be <b>8 scenes total</b>.</p>";
 ('<div><p>Click "Continue" to start the experiment.</p>');
 
 export const POST_SURVEY_TEXT =
