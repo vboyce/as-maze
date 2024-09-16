@@ -147,7 +147,7 @@ export async function run({
       return head + img_format + tail;
     },
     choices: [],
-    trial_duration: 3000,
+    trial_duration: 5000,
   };
 
   let practice_trial = {
@@ -172,7 +172,7 @@ export async function run({
     type: HtmlButtonResponsePlugin,
     stimulus: "",
     choices: [],
-    trial_duration: 1000,
+    trial_duration: 2000,
     on_finish: function () {
       done++;
     },
@@ -198,7 +198,7 @@ export async function run({
       return head + img_format + tail;
     },
     choices: [],
-    trial_duration: 3000,
+    trial_duration: 5000,
   };
 
   let trial = {
