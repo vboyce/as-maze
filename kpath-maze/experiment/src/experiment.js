@@ -44,7 +44,7 @@ import {
  *
  * @type {import("jspsych-builder").RunFunction}
  */
-
+console.log(all_images);
 let done = 1;
 const BONUS = 5;
 console.log(stimuli);
@@ -243,7 +243,7 @@ export async function run({
 
     timeline.push(preload);
 
-    //timeline.push(consent);
+    timeline.push(consent);
     timeline.push(instructions);
     timeline.push(practice_1);
     timeline.push(instructions2);
