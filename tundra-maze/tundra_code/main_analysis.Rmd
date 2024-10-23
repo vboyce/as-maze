@@ -37,7 +37,6 @@ options(mc.cores = parallel::detectCores())
 theme_set(theme_bw())
 
 dat_loc <- "tundra-maze/tundra_data/tundra_maze-trials.csv"
-
 ```
 
 
@@ -52,7 +51,7 @@ free_response <- raw |>
   filter(is.na(correct)) |>
   filter(!is.na(response)) |>
   filter(is.na(stimulus)) |>
-  select(workerid, response) |> 
+  select(workerid, response) |>
   mutate(response = str_replace_all(response, "\\{", "") |> str_replace_all("\\}", "") |> str_replace_all("'", '"')) |>
   separate(response, into = c("blah", "blah1", "blah2", "blah3", "blah4", "blah5"), sep = '", "')
 
@@ -74,31 +73,36 @@ good_stuff <- raw |>
   mutate(order = map(order, fromJSON)) |>
   mutate(rt = map(rt, fromJSON)) |>
   mutate(words = map(words, fromJSON)) |>
-  unnest_longer(c("correct", "cumrt", "words", "distractors", "order", "rt"))
+  unnest_longer(c("correct", "cumrt", "words", "distractors", "order", "rt")) |>
+  filter(trial_index != 2) # filter out practice sentence
 
 
-# kids are 1060, 1058, 1059
+# kids are 1060, 1058, 1059, 1297
 # adults are 1066, 1055, 1067, 1065
 
-kids_v_adults <- good_stuff |> mutate(is_kid=case_when(
-  workerid %in% c(1060, 1058, 1059) ~ "kid",
-  workerid %in% c(1066, 1055, 1067, 1065) ~ "adult",
-  T ~ NA)) |> filter(!is.na(is_kid))
-
+kids_v_adults <- good_stuff |>
+  mutate(is_kid = case_when(
+    workerid %in% c(1060, 1058, 1059, 1297) ~ "kid",
+    workerid %in% c(1066, 1055, 1067, 1065) ~ "adult",
+    T ~ NA
+  )) |>
+  filter(!is.na(is_kid))
 ```
 
 # Checks 
 ## Overall error rate
 
 ```{r}
-
-kids_v_adults|>
+kids_v_adults |>
   group_by(workerid, is_kid) |>
   summarize(m = mean(correct)) |>
   ggplot(aes(x = m)) +
   geom_histogram() +
   geom_vline(xintercept = .9, color = "red") +
-  labs(x = "Mean Maze accuracy")+facet_wrap(~is_kid)
+  labs(x = "Mean Maze accuracy") +
+  facet_wrap(~is_kid)
+
+kids_v_adults |> group_by(is_kid) |>   summarize(m = mean(correct)) 
 ```
 
 
@@ -106,25 +110,42 @@ kids_v_adults|>
 
 ```{r}
 kids_v_adults |>
-  filter(correct == 1)  |> filter(distractors!="x-x-x") |> 
-  ggplot(aes(x = reorder(workerid, rt), y = rt, color=is_kid)) +
+  filter(correct == 1) |>
+  filter(distractors != "x-x-x") |>
+  ggplot(aes(x = reorder(workerid, rt), y = rt, color = is_kid)) +
   geom_point(alpha = .05) +
-  coord_cartesian(ylim=c(0,5000))+
+  coord_cartesian(ylim = c(0, 5000)) +
   stat_summary(fun.data = "mean_cl_boot") +
-  labs(x = "Participant") 
+  labs(x = "Participant")
 
-kids_v_adults |> filter(correct==1) |> filter(distractors!="x-x-x")|> group_by(workerid, is_kid) |> summarize(mean=mean(rt), median=median(rt))
-
+kids_v_adults |>
+  filter(correct == 1) |>
+  filter(distractors != "x-x-x") |>
+  group_by(workerid, is_kid) |>
+  summarize(mean = mean(rt), median = median(rt)) |>
+  arrange(is_kid, median)
 ```
 
 
 ## Correlation between adults and kids
 
-```{r, fig.width=6}
-corr <- kids_v_adults |>   filter(correct == 1) |> filter(distractors!="x-x-x") |> 
-  group_by(is_kid, words, distractors, trial_index) |> summarize(m=mean(rt), n=n()) |>filter(n>1) |> select(-n) |>  pivot_wider(names_from=is_kid, values_from=m) 
+```{r, fig.width=5}
+corr <- kids_v_adults |>
+  filter(correct == 1) |>
+  filter(distractors != "x-x-x") |>
+  filter(rt < 3000) |>
+  group_by(is_kid, words, distractors, trial_index) |>
+  summarize(m = mean(rt), n = n()) |>
+  filter(n > 2) |>
+  select(-n) |>
+  pivot_wider(names_from = is_kid, values_from = m)
 
-corr |> ggplot(aes(x=adult, y=kid))+geom_point()+geom_smooth(method="lm")+geom_abline()+coord_equal(xlim=c(0, 2500), ylim=c(0,2500))+labs(x="Adult RT (4 participants)", y="10-11 yo RT (3 participants)")
+corr |> ggplot(aes(x = adult, y = kid)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  geom_abline() +
+  coord_equal(xlim = c(500, 2000), ylim = c(500, 2000)) +
+  labs(x = "Adult RT (4 participants)", y = "10-11 yo RT (4 participants)")
 
 ggsave("corr_tundra.png")
 cor.test(corr$adult, corr$kid)
@@ -133,56 +154,75 @@ cor.test(corr$adult, corr$kid)
 ## Person-person correlations
 
 ```{r}
-
-wide <- kids_v_adults |>   filter(correct == 1) |> filter(distractors!="x-x-x") |> 
-  select(workerid, words, distractors, trial_index, rt)  |>  pivot_wider(names_from=workerid, values_from=rt) 
-
+wide <- kids_v_adults |>
+  filter(correct == 1) |>
+  filter(distractors != "x-x-x") |>
+  filter(rt < 3000) |>
+  select(workerid, words, distractors, trial_index, rt) |>
+  pivot_wider(names_from = workerid, values_from = rt)
 ```
 
-## pairwise?
-
-```{r}
-
-# kids are 1060, 1058, 1059
-# adults are 1066, 1055, 1067, 1065
-
-# kids
-
-a <- cor.test(wide$`1060`, wide$`1058`)$estimate
-b <- cor.test(wide$`1060`, wide$`1059`)$estimate
-c <- cor.test(wide$`1059`, wide$`1058`)$estimate
-
-(a+b+c)/3
-
-# adults
-d <- cor.test(wide$`1066`, wide$`1055`)$estimate
-e <- cor.test(wide$`1066`, wide$`1067`)$estimate
-f <- cor.test(wide$`1066`, wide$`1065`)$estimate
-g <- cor.test(wide$`1055`, wide$`1067`)$estimate
-h <- cor.test(wide$`1055`, wide$`1065`)$estimate
-i <- cor.test(wide$`1067`, wide$`1065`)$estimate
-
-(d+e+f+g+h+i)/6
-
-
-
-
-
-
-```
 
 ## LOO
 
 ```{r}
-cor.test(wide$`1060`, (wide$`1059`+wide$`1058`)/2)$estimate
-cor.test(wide$`1059`, (wide$`1060`+wide$`1058`)/2)$estimate
-cor.test(wide$`1058`, (wide$`1059`+wide$`1060`)/2)$estimate
+kids <- c("1060", "1059", "1058", "1297")
+adults <- c("1066", "1055", "1067", "1065")
+all <- c("1060", "1059", "1058", "1297", "1066", "1055", "1067", "1065")
+do_cor_test <- function(target, others) {
+  cor.test(pull(wide, target), wide |> select(-target) |> select(any_of(others)) |> rowMeans(na.rm = T))$estimate
+}
+
+# within kids
+do_cor_test("1060", kids)
+do_cor_test("1059", kids)
+do_cor_test("1058", kids)
+do_cor_test("1297", kids)
 
 
-cor.test(wide$`1066`, (wide$`1055`+wide$`1067`+wide$`1065`)/3)$estimate
-cor.test(wide$`1055`, (wide$`1066`+wide$`1067`+wide$`1065`)/3)$estimate
-cor.test(wide$`1067`, (wide$`1055`+wide$`1066`+wide$`1065`)/3)$estimate
-cor.test(wide$`1065`, (wide$`1055`+wide$`1067`+wide$`1066`)/3)$estimate
+# within adults
+do_cor_test("1066", adults)
+do_cor_test("1055", adults)
+do_cor_test("1067", adults)
+do_cor_test("1065", adults)
+
+# kid to adults
+do_cor_test("1060", adults)
+do_cor_test("1059", adults)
+do_cor_test("1058", adults)
+do_cor_test("1297", adults)
+
+# kid to 3 adults
+adults_1 <- c("1066", "1055", "1067")
+adults_2 <- c("1066", "1055", "1065")
+adults_3 <- c("1066", "1065", "1067")
+adults_4 <- c("1065", "1067", "1055")
+do_cor_test("1060", adults_4)
+do_cor_test("1059", adults_4)
+do_cor_test("1058", adults_4)
+do_cor_test("1297", adults_4)
+
+# adult to kids
+do_cor_test("1066", kids)
+do_cor_test("1055", kids)
+do_cor_test("1067", kids)
+do_cor_test("1065", kids)
+
+# kid to all
+do_cor_test("1060", all)
+do_cor_test("1059", all)
+do_cor_test("1058", all)
+do_cor_test("1297", all)
+
+
+# adult to all
+do_cor_test("1066", all)
+do_cor_test("1055", all)
+do_cor_test("1067", all)
+do_cor_test("1065", all)
+```
+```{r}
+
 
 
 ```
