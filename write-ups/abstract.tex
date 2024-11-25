@@ -29,7 +29,7 @@
 \usepackage{etoolbox}
 \newtoggle{anonymous}
 \togglefalse{anonymous}
-
+\usepackage{ulem}
 \renewcommand{\title}[1]{\textbf{#1}\\}
 \newcommand{\authors}[1]{\iftoggle{anonymous}{\phantom{#1}}{#1}\\}
 \newcommand{\email}[1]{\iftoggle{anonymous}{\phantom{#1}}{#1}}
@@ -42,8 +42,6 @@
 \noindent\title{TODO title goes here}
 \authors{Veronica Boyce (Stanford University, vboyce@stanford.edu), Roger P. Levy (MIT)} 
 \newline
-%
-
 
 Much linguistic input is ambiguous in isolation, at least as it is incrementally encountered and processed. In particular, various syntactic structures exist that are ambiguous between multiple different attachment structures part way through the input.
 Luckily, language we encounter is intended to be informative and communicative, so there are contextual correlations between features of the language itself, the prior linguistic context, and the visual context that can help inform what parse is expected. 
@@ -51,7 +49,8 @@ Luckily, language we encounter is intended to be informative and communicative, 
 A general question is how rapidly different types of contextual information are used and what tasks can detect them. In the present work, we use the Maze task (CITATIONS) to look at online processing times delays at disambiguation points to explore the role of linguistic and visual context in biasing attachment preferences. Both experiments use the NP versus VP attachment ambiguity. 
 
 \medskip
-\noindent\textbf{Experiment 1: Linguistic context} We used the materials from Altmann \& Steedman (1988) study N to see if the Maze task would reveal influences on attachment preferences based on the described context (see reverse for sample item). In clause by clause SPR, A \& S had found an interaction where NP modifiers were preferred in the 2-referent condition (when needed to disambiguate *which* map), but VP modifiers where preferred in the 1-referent condition. We recruited 100 participants to read TODO number of items in an A-Maze paradigm. For the 88 participants who had greater than 80\% selection accuracy, we found an expected interaction effect of 84 ms [95\% CI 17-148ms] on the disambiguating words. Participants read words faster in the 2-referent NP and 1-referent VP conditions, indicating that preferred parse was influenced by whether the context supported the presence of a restrictive modifier.  This confirmed that the Maze task can localize syntactic parsing differences that interact with linguistic context. 
+\noindent\textbf{Experiment 1: Linguistic context} We used the materials from Altmann \& Steedman (1988) study 2
+ to see if the Maze task would reveal influences on attachment preferences based on the described context (see reverse for sample item). In clause by clause SPR, A\&S found an interaction where NP modifiers were preferred in the 2-referent condition (when there were two maps to distinguish between), but VP modifiers where preferred in the 1-referent condition (when there was a map and a manuscript). We recruited 100 participants to each read 16 of the 32 items in an A-Maze paradigm (4 items in each condition). For the 88 participants who had greater than 90\% overall selection accuracy, we found an expected interaction effect of 84 ms [95\% CI 17-148ms] on the disambiguating words (Table 1). Participants read words faster in the 2-referent NP and 1-referent VP conditions (Figure 1), indicating that preferred parse was influenced by whether the context supported the presence of a restrictive modifier.  This confirmed that the Maze task can localize syntactic parsing differences that interact with linguistic context. 
 
 \medskip
 \noindent\textbf{Experiment 2: Visual context} Visually presented context appears to affect online sentence parsing in visual world tasks (the 1995 paper, kpath). When there is only one object that matches a noun, the following PP is initially interpreted as a VP-attached goal location (judging by eye movements). When there are two objects, the PP seems to be immediately interpreted as a restrictive NP-attached modifier. This leads to strong reanalysis penalties when an another PP (the true goal) occurs, but only in 1-referent conditions. We are not aware of any incremental reading paradigms being used with co-occurring visual context. We set up a Maze task where a context image was displayed for N seconds and then stayed visible as the maze selections appeared below (Figure TODO). We used some items based on TODO weighall or whatever, and we recruited 200 participants who each saw 4 critical items (1/condition) mixed with 4 fillers. Distractor words were generated using the A-Maze paradigm. 
@@ -61,74 +60,123 @@ We found expected RT effects from linguistic conditions (increased RT at TODO), 
 \medskip
 \noindent\textbf{Discussion:} Online ambiguity resolution is important, but many forms of context can constrain the interpretation of utterances. However, it is unclear under what conditions different types of information affect linguistic processing how quickly, or what experimental paradigms are sufficient to detect them. Here, we demonstrate that context presented linguistically does affect Maze RTs, but that co-presented visual context does not, unlike in visual world paradigms. This different could be due to high cognitive load from Maze and lack of task reason to closely inspect the image, or the two tasks could be querying different stages in linguistic processing and interpretation. 
 
-TODO future work 
-TODO are there ERP studies on this? 
-TODO can I assume people know the Maze task at this point? 
-TODO possibly link to where expts can be tried out? 
+%TODO future work 
+%TODO are there ERP studies on this? 
+%TODO can I assume people know the Maze task at this point? 
+%TODO possibly link to where expts can be tried out? 
 
 \newpage
 
+\begin{center}\textbf{Experiment 1: Linguistic context}\end{center}
+
 \begin{minipage}{\textwidth}
 \begin{small}
-Experiment 1 example stimuli:\\
-\textit{(context)} A historian was working in the British Museum holding a magnifying glass. He'd sat down to study  a map. \\
-\textit{(1 or 2 referent)} On his desk there was \textbf{a map} which had an appalling tear and \textbf{a  {[manuscript | map]}} which seemed in perfect condition. \\
-\textit{(NP or VP attachment)} The historian had to study \textbf{the map with the {[appalling  tear | magnifying glass]}} so as to value it.
+Example item:  \textit{(context sentence)} A historian was working in the British Museum holding a magnifying glass. He'd sat down to study  a map. 
+\textit{(1 or 2 referents introduced)} On his desk there was \textbf{a map} which had an appalling tear and \textbf{a  {[manuscript | map]}} which seemed in perfect condition. \textit{(a PP that resolves to NP or VP attachment, disambiguation underlined)} The historian had to study \textbf{the map with the {[\uline{appalling  tear} | 
+		\uline{magnifying glass}]}} so as to value it.
 \end{small} 
+\medskip
 \end{minipage}
 
-
-
-
-
-
-
-
-
-
 \begin{minipage}{.5\textwidth}
-	\captionof{figure}{Results}
-	{	\includegraphics[width=\textwidth]{nrsa.png}} 
+	\captionof{figure}{Expt 1 Results}
+	{	\includegraphics[width=\textwidth]{hsp_as.png}} 
 	\begin{small}
-	CAPTION HERE
+	Means and bootstrapped 95\% CIs for each of the 4 conditions. There is an interaction between the context and what the PP modifies. 
 		
 	\end{small}
 	
 \end{minipage}
-~~~
-\begin{minipage}{.5\textwidth}	
-	\begin{tabular}{l}
-		TODO results table here\\
+~~
+\begin{minipage}{.45\textwidth}
+	\begin{small}
+\captionof{table}{Expt 1  model coefficients}
+	\begin{tabular}{|l|l|l|}
+		\hline
+		Term & Est. & 95\% CrI \\
+		\hline
+		Intercept & 995 ms & [943 -- 1046] \\
+		Type (VP) & -73 ms & [-134 -- -11] \\
+		Context (2-referent) & 22 ms & [-13 -- 59] \\
+		Type x Context & 84 ms  & [17 -- 148] \\
+		\hline
 	\end{tabular}
+	
+	 Model: \textit{RT $\sim$ type $\times$ context + (type $\times$ context | item ) + (type $\times$ context | subject) } 
+Fit to reading times on the disambiguating words for correct responses only. Type and context were sum coded (VP, 2-referent coded as +.5; NP, 1-referent as -.5) and weakly regularizing priors were used. 
+	 \end{small}
+	 	
+\end{minipage}
+
+\smallskip
+\rule{\textwidth}{1pt}
+\begin{center}\textbf{Experiment 2: Visual context}\end{center}
+
+	\begin{minipage}{.3\textwidth}
+	\begin{small}Example item:\\\textit{Visual context:} \\ (seen for 5 seconds before starting sentence) \end{small}
+\end{minipage}	~~~
+\begin{minipage}{.3\textwidth}
+\includegraphics[width=.75\textwidth]{frog_2.png}		\begin{small}\\
+	1-referent (frog and dog) \end{small}
+
+\end{minipage}
+~~~
+\begin{minipage}{.3\textwidth}	
+\includegraphics[width=.75\textwidth]{frog_1.png}
+\begin{small}\\ 2-referent (2 frogs) \end{small}
+
 \end{minipage}
 
 \begin{minipage}{\textwidth}
-	Experiment 2 materials: 2 sentences x 2 images
-	
+	\begin{small}
+	\textit{Sentence (ambiguous v unambiguous):} The girl will put the frog [\textbf{that's}] on the table on the chair.
+	\end{small}
 	
 \end{minipage}
+
+\vspace{10pt}
+	\begin{minipage}{.65\textwidth}
+					\captionof{figure}{Expt 2 Results}
+		{	\includegraphics[width=\textwidth]{hsp_kpath.png}} 
 	
-	
-	\begin{minipage}{.5\textwidth}
-		\captionof{figure}{Results}
-		{	\includegraphics[width=\textwidth]{nrsa.png}} 
-		\begin{small}
-			CAPTION HERE
-			
-		\end{small}
-		
 	\end{minipage}
 	~~~
-	\begin{minipage}{.5\textwidth}	
-		\begin{tabular}{l}
-			TODO results table here\\
-		\end{tabular}
+	\begin{minipage}{.3\textwidth}		\begin{small}
+
+			Estimate and bootstrapped 95\% CI for each of the 4 conditions. The second preposition (boxed) is the critical position. There is a main effect of sentence type, where ambiguous sentences have a longer RTs on the second PP. 
+			
+		\end{small}
+		\end{minipage}
+		
+		\begin{minipage}{.48\textwidth}
+	\begin{small}
+	\captionof{table}{Expt 2 model coefficients}
+	\begin{tabular}{|l|l|l|}
+		\hline
+		Term & Est. & 95\% CrI \\
+		\hline
+		Intercept & 931 ms & [811 -- 1041] \\
+		Type (Ambiguous) & 142 ms & [-2 -- 258] \\
+		Context (2-referent) & -27 ms & [-99 -- 45] \\
+		Type x Context & -34 ms  & [-146 -- 86] \\
+		\hline
+	\end{tabular}
+\end{small}
+	\end{minipage}
+	~~
+	\begin{minipage} {.5\textwidth}\begin{small}
+	Model: \textit{RT $\sim$ type $\times$ context + (type $\times$ context | item) + (type $\times$ context | subject)}
+	Fit to reading times on the second preposition for correct responses only. Type and context were sum coded (Ambiguous, 2-referent coded as +.5; unambiguous, 1-referent as -.5) and weakly regularizing priors were used. 
+\end{small}
 	\end{minipage}
 
+\vspace{5pt}
+\rule{\textwidth}{1pt}
+
+
 \begin{minipage}{\textwidth}
-	\begin{small} \textbf{References:}
-		
-		TODO update
+	\vspace{5pt}
+	\begin{small} \textbf{References:}%TODO update
 Leung, Hawkins, Yurovsky. Cogsci, 2020. $\bullet$ Glucksberg, Krauss, Weisberg. J of Expt Child Psychology, 1966. $\bullet$ Clark \& Wilkes-Gibbs. Cognition, 1986. $\bullet$ Hawkins, Frank, Goodman. Cognitive Science, 2020. $\bullet$ Reimers \& Gurevych. arXiv 2019.
 \end{small}
 \end{minipage}

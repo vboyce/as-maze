@@ -36,9 +36,9 @@ options(mc.cores = parallel::detectCores())
 
 theme_set(theme_bw())
 
-dat_loc <- "data/as_expt-trials.csv"
+dat_loc <- "as-maze/data/as_expt-trials.csv"
 
-mod_loc <- "code/models"
+mod_loc <- "as-maze/code/models"
 ```
 
 # Background
@@ -116,8 +116,8 @@ sentences <- good_stuff |>
   group_by(workerid, trial_index) |>
   summarize(sentence = str_c(words, collapse = " ", sep = ""))
 
-post_maze <- read_delim(here("materials/post_maze.txt"), col_names = c("type", "number", "sentence", "blah", "blahblah"), ";") |> select(-blah, -blahblah)
-critical <- read_delim(here("materials/labelled.txt"), ";", col_names = c("type", "number", "critical")) |> select(-X4)
+post_maze <- read_delim(here("as-maze/materials/post_maze.txt"), col_names = c("type", "number", "sentence", "blah", "blahblah"), ";") |> select(-blah, -blahblah)
+critical <- read_delim(here("as-maze/materials/labelled.txt"), ";", col_names = c("type", "number", "critical")) |> select(-X4)
 
 with_labels <- good_stuff |>
   left_join(sentences) |>
@@ -246,10 +246,13 @@ ggplot(critical_only |> filter(correct == 1), aes(x = type, y = rt, color = cont
 ```{r}
 critical_only |> filter(correct == 1) |> 
   mutate(type=str_c(type,"-modifier"),
-         context=str_c(str_sub(context,1,1),"-referent context")) |> ggplot( aes(x = type, y = rt, shape = context)) + # geom_point(alpha=.05,position=position_jitterdodge(jitter.width=.3,dodge.width=.7))+
+         context=str_c(str_sub(context,1,1),"-referent context")) |> ggplot( aes(x = type, y = rt, shape = context, color=context)) + 
   stat_summary(fun.data = "mean_cl_boot", position = position_dodge(width = .7))+
   labs(y="Reaction time (ms)", x="", shape="")+
-      guides(shape = guide_legend(nrow=1, byrow=T, override.aes = list(linetype = 0, alpha=1, fill=NA, size=.7) ) )+
+      #guides(color = guide_legend(nrow=1, byrow=T, override.aes = list(linetype = 0, alpha=1, size=.7) ) )+
+    guides(color = guide_legend("Treatment & State", override.aes = list(linetype = 0, alpha=1, size=.7)),
+         shape = guide_legend("Treatment & State", override.aes = list(linetype = 0, alpha=1, size=.7))) +
+  scale_color_solarized()+
   theme_bw()+
   theme(legend.position = "bottom",
         legend.title=element_blank(),
@@ -261,7 +264,7 @@ critical_only |> filter(correct == 1) |>
         axis.text.y=element_text(size=12, color="black"),
         legend.text = element_text(size=14))
 
-ggsave("nrsa.png",width=5, height=3)
+ggsave(here("write-ups/hsp_as.png"),width=5, height=3)
 ```
 
 Compare their figure 3: 
